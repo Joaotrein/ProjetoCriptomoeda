@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const PaginaFormulario = styled.div`
   width: 360px;
-  padding: 7vw 0 0;
+  padding: 4vw 0 0;
   margin: auto;
 `
 export const Formulario = styled.div`
@@ -41,7 +41,7 @@ export const Formulario = styled.div`
 
 > button{
     outline: 0;
-    background: #EBAB1C;
+    background: #dea20a;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -52,7 +52,7 @@ export const Formulario = styled.div`
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
-    &:hover{background: #dea20a;}
+    &:hover{background: #EBAB1C;}
 
 }
 `
