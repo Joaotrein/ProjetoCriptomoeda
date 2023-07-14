@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from "../../Components/Sidebar/Sidebar";
-import Content from '../../Components/Content/Content';
+
 
 function existem() {
     return (
@@ -11,16 +11,7 @@ function existem() {
                 <span>Quantas criptomoedas existem?</span>
             </h1>
 
-            <Content 
-            text="
             
-                Criptomoedas sao bla bla
-                bladdmdasdaoidjao
-
-                dd
-            
-            
-            " />
         </>
     )   
 }

@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
-import { ContainerTexto, ContainerConteudo, BotaoConcluir, BotaoConta, MensagemHover } from './Content.jsx';
+import { BotaoConcluir, BotaoConta, MensagemHover } from './BotoesContent.jsx';
 import { MdAccountCircle } from "react-icons/md";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 
-const Content = ({ color, children }) => {
-  return (
-    <ContainerConteudo>
-      {React.Children.map(children, (child) => (
-        <ContainerTexto color={color}>{child}</ContainerTexto>
-      ))}
-    </ContainerConteudo>
-  );
- 
+
+function BotoesContent() {
+  
   const [mostrarMensagemConta, setMostrarMensagemConta] = useState(false);
   const [mostrarMensagemConcluir, setMostrarMensagemConcluir] = useState(false);
 
@@ -30,7 +24,6 @@ const Content = ({ color, children }) => {
   const handleMouseLeaveConcluir = () => {
     setMostrarMensagemConcluir(false);
   };
-
   return (
     <>
       <BotaoConta onMouseEnter={handleMouseEnterConta} onMouseLeave={handleMouseLeaveConta}>
@@ -42,10 +35,8 @@ const Content = ({ color, children }) => {
         <BsFillCheckCircleFill />
         {mostrarMensagemConcluir && <MensagemHover>Concluir capítulo</MensagemHover>}
       </BotaoConcluir>
-
-
     </>
   );
-};
+}
 
-export default Content;
+export default BotoesContent;

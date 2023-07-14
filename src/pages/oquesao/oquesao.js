@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from "../../Components/Sidebar/Sidebar";
-import Content from '../../Components/Content/Content';
+import BotoesContent from '../../Components/Content/BotoesContent';
 
 function oquesao() {
   return (
@@ -11,11 +11,11 @@ function oquesao() {
         <span>O que são criptomoedas?</span>
       </h1>
 
-      {/* <Content color="red">
-        <p className='texto1'>dsnjdasjkdhjkashdjkashdjkashdjkhasjkdhasjkdhjkadhjkashdjkasdhjkshdjk</p>
-        <p className='texto2'>Segundo texto</p>
-        <p>Terceiro texto</p>
-      </Content>       */}
+      <BotoesContent />
+
+      
+
+
     </>
   );
 }
