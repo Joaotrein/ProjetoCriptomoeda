@@ -1,7 +1,7 @@
-import React from 'react';
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import BotoesContent from '../../Components/BotoesContent/BotoesContent';
 import Content from '../../Components/Conteudo/Conteudo';
+import Footer from '../../Components/Footer/Footer';
 
 function oquesao() {
   return (
@@ -14,6 +14,7 @@ function oquesao() {
 
       <BotoesContent />
       {Content.topico1}
+      <Footer/>
     </>
   );
 }

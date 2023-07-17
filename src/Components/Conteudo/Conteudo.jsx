@@ -5,12 +5,16 @@ export const ContainerConteudo = styled.div`
   padding: 2vw;
   margin-top: 10vh;
   background-color: #ffffffeb;
-  width: 60%;
+  width: 65%;
   margin: auto;
   border-radius: 15px 15px 0px 0px;
-  height: 100vh;
+  height: auto;
 
-  > p{ 
+  b {
+    color: #FFB800;
+  }
+
+  > p { 
     font-size: 25px;
     text-align: justify;
   }

@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import BotoesContent from '../../Components/BotoesContent/BotoesContent';
 import Content from '../../Components/Conteudo/Conteudo';
+import Footer from '../../Components/Footer/Footer';
 
 
 function paraqueservem() {
@@ -15,7 +16,7 @@ function paraqueservem() {
 
             <BotoesContent />
             {Content.topico2}
-
+            <Footer />
         </>
     )
 }
