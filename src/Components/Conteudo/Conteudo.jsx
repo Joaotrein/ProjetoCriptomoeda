@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const ContainerConteudo = styled.div`
   display: flex;
@@ -9,10 +9,13 @@ export const ContainerConteudo = styled.div`
   margin: auto;
   border-radius: 15px 15px 0px 0px;
   height: 100vh;
+
+  > p{ 
+    font-size: 25px;
+    text-align: justify;
+  }
 `
 
-export const ContainerTexto = styled.p`
-  color: black;
-  width: 2px;
-
+export const Espacamento = styled.br`
+  margin-bottom: 1rem;
 `

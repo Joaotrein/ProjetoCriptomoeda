@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from "../../Components/Sidebar/Sidebar";
-import BotoesContent from '../../Components/Content/BotoesContent';
+import BotoesContent from '../../Components/BotoesContent/BotoesContent';
+import Content from '../../Components/Conteudo/Conteudo';
 
 function oquesao() {
   return (
@@ -12,10 +13,7 @@ function oquesao() {
       </h1>
 
       <BotoesContent />
-
-      
-
-
+      {Content.topico1}
     </>
   );
 }
