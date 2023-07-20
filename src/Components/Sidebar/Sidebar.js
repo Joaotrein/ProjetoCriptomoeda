@@ -18,7 +18,7 @@ function Sidebar (){
             <Navegation>
                 <Lista>
                     <Logo>
-                        <img src={bitcoin}/>
+                        <img src={bitcoin} alt="Criptomoeda BITCOIN"/>
                     </Logo>
                     <ItemLista>
                         <TbCoinBitcoin />
@@ -75,7 +75,6 @@ function Sidebar (){
                         <i></i>
                         <p><Link to="../">Sair</Link></p>
                     </ItemLista>
-
                 </Lista>
             </Navegation>
         </Sidenav>

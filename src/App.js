@@ -11,6 +11,7 @@ import Existem from './pages/Existem/Existem';
 import Direitos from './pages/Direitos/Direitos';
 import Investir from './pages/Investir/Investir';
 import Chatbot from './pages/Chatbot/Chatbot';
+
 function App() {
   return (
    <Router>
@@ -26,7 +27,6 @@ function App() {
           <Route path='/direitos' element={<Direitos/>} />
           <Route path='/investir' element={<Investir/>} />
           <Route path='/chatbot' element={<Chatbot/>} />
-
       </Routes>
    </Router>
   );

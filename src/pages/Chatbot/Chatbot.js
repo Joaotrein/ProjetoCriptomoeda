@@ -1,14 +1,14 @@
 import React from 'react';
 import Sidebar from "../../Components/Sidebar/Sidebar";
+import Chatbot from '../../Components/ChatbotLayout/Chatbot';
 
 
 function chatbot() {
     return (
         <>
             <Sidebar />
-
-            <h1>Como posso obte-lás?</h1>
-          
+                <h1>Chatbot</h1>
+            <Chatbot />          
         </>
     )   
 }

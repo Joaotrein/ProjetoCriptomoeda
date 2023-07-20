@@ -5,7 +5,7 @@ export const PaginaFormulario = styled.div`
   padding: 4vw 0 0;
   margin: auto;
 `
-export const Formulario = styled.div`
+export const Formulario = styled.form`
   position: relative;
   z-index: 1;
   border-radius: 6px;
@@ -53,7 +53,6 @@ export const Formulario = styled.div`
     transition: all 0.3 ease;
     cursor: pointer;
     &:hover{background: #EBAB1C;}
-
 }
 `
 export const Mensagem = styled.p`
@@ -69,4 +68,14 @@ export const Mensagem = styled.p`
     text-decoration: underline;
   }
 }
+`
+
+export const MensagemErro = styled.p`
+  color:red;
+  font-weight: 700;
+  font-size: 12px;
+  background-color: #DBD9DB;
+  border-radius: 9px;
+  padding: 0.5vw;
+  margin: 0 0 1vw 0;
 `

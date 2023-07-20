@@ -9,6 +9,7 @@ export const ContainerConteudo = styled.div`
   margin: auto;
   border-radius: 15px 15px 0px 0px;
   height: auto;
+  flex-direction: column;
 
   b {
     color: #FFB800;
@@ -17,9 +18,6 @@ export const ContainerConteudo = styled.div`
   > p { 
     font-size: 25px;
     text-align: justify;
+    margin-bottom: 1rem;
   }
-`
-
-export const Espacamento = styled.br`
-  margin-bottom: 1rem;
-`
+`;
