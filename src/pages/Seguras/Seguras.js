@@ -5,6 +5,28 @@ import { ContainerConteudo } from '../../Components/Conteudo/Conteudo.jsx';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
 import Footer from '../../Components/Footer/Footer';
 
+const EstiloJson = ({ paragraphs }) => {
+    const EstiloPalavras = (text) => {
+      return text.replace(
+        /Blockchain e Descentralização:|ataques cibernéticos.|Controle de Chaves Privadas:|uma pública e outra privada|Vulnerabilidades e Hacks:|Responsabilidade Individual:|alto nível de segurança|Criptografia:|criptografia avançados|moeda digital|as criptomoedas são notavelmente seguras/gi,
+        (conexao) => `
+        <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
+      `
+      );
+    };
+  
+    return (
+      <ContainerConteudo>
+        {paragraphs.map((paragraph, index) => (
+          <p
+            key={index}
+            dangerouslySetInnerHTML={{ __html: EstiloPalavras(paragraph) }}
+          />
+        ))}
+      </ContainerConteudo>
+    );
+  };
+
 
 function Seguras() {
     const { seguras } = conteudoData.conteudo[3];
@@ -17,11 +39,7 @@ function Seguras() {
                 <span>As criptomoedas são seguras?</span>
             </h1>
             <BotoesContent />
-            <ContainerConteudo>
-                {paragraphs.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                ))}
-            </ContainerConteudo>
+            <EstiloJson paragraphs={paragraphs} />
             <Footer />
         </>
     )

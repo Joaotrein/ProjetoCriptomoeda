@@ -1,9 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { PaginaFormulario, Formulario, Mensagem, MensagemErro } from '../Login/Login.jsx';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { PaginaFormulario, Formulario, Mensagem, MensagemErro} from '../Login/Formularios.jsx';
+import React from 'react';
 import * as yup from 'yup';
+import { yupResolver } from "@hookform/resolvers/yup";
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 type CreateUserData = {
   name: string;
@@ -19,30 +19,12 @@ const createUserFormSchema = yup.object().shape({
 
 function Cadastro() {
   const { register, handleSubmit, formState: { errors } } = useForm<CreateUserData>({
-    resolver: yupResolver(createUserFormSchema) // Use the resolver for validation
+    resolver: yupResolver(createUserFormSchema) // Use o resolver para lidar com a validação
   });
 
-  const handleCreateUser: SubmitHandler<CreateUserData> = async (data) => {
-    try {
-      const response = await fetch('/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to register user');
-      }
-
-      const result = await response.json();
-      console.log(result); // Result from the server
-      alert('Cadastro feito!');
-    } catch (error) {
-      console.error('Error:', error);
-      alert('Error: Failed to register user');
-    }
+  const handleCreateUser: SubmitHandler<CreateUserData> = async (data) => { // Receba o objeto 'data' contendo os valores do formulário
+    alert("cadastro feito");
+    console.log(data); // Exemplo de como acessar os dados do formulário
   };
 
   return (

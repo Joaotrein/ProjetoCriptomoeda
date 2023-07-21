@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { PaginaFormulario,Formulario, Mensagem} from '../Login/Login.jsx'
+import { PaginaFormulario,Formulario, Mensagem} from '../Login/Formularios.jsx'
 function Recuperar() {
     return (
         <>

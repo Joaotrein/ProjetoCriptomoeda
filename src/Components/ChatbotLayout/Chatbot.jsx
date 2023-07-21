@@ -12,7 +12,7 @@ export const FundoChat = styled.section`
 
 `
 
-export const CaixaTexto = styled.input`
+export const CaixaTexto = styled.div`
   background-color: #ffffffeb;
   width: 40%;
   display: flex;
@@ -22,12 +22,31 @@ export const CaixaTexto = styled.input`
   position: fixed;
   bottom: 3vh; 
   left: 30%;
-  padding: 10px;
   font-size: 16px;
   box-shadow: black 3px 3px 3px 3px ;
 
-  &:focus {
+  input{
+    width: 100%;
+    height: 3vh;
+    border-radius: 12px;
+    height: auto;
+    border: none;
+    padding: 10px;
+
+    &:focus {
     outline: none;
     box-shadow: none;
   }
+  }
+
+  button{
+    border: none;
+    border-radius: 12px;
+    padding: 8px;
+    background-color: #ffffffeb;
+    cursor: pointer;
+    font-size: 16px;
+    color: #003296;
+  }
+  
 `;

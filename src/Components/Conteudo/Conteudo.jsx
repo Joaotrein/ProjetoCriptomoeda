@@ -5,19 +5,17 @@ export const ContainerConteudo = styled.div`
   padding: 2vw;
   margin-top: 10vh;
   background-color: #ffffffeb;
-  width: 65%;
+  width: 70%;
   margin: auto;
   border-radius: 15px 15px 0px 0px;
   height: auto;
   flex-direction: column;
 
-  b {
-    color: #FFB800;
-  }
-
-  > p { 
-    font-size: 25px;
+  p { 
+    font-size: 23px;
     text-align: justify;
     margin-bottom: 1rem;
   }
 `;
+
+export default ContainerConteudo;

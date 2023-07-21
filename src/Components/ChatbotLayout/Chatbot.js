@@ -6,10 +6,12 @@ function Chatbot() {
     return (
         <>
             <FundoChat>
-                <CaixaTexto />
-                <button>
-                    <RiSendPlaneFill />
-                </button>
+                <CaixaTexto>
+                    <input placeholder="Digite sua pergunta aqui!" />
+                    <button>
+                        <RiSendPlaneFill />
+                    </button>
+                </CaixaTexto>
             </FundoChat>
         </>
     )

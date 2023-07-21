@@ -1,9 +1,31 @@
 import React from 'react';
+import { ContainerConteudo } from '../../Components/Conteudo/Conteudo'
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import BotoesContent from '../../Components/BotoesContent/BotoesContent';
-import { ContainerConteudo } from '../../Components/Conteudo/Conteudo.jsx';
 import Footer from '../../Components/Footer/Footer';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
+
+const EstiloJson = ({ paragraphs }) => {
+  const EstiloPalavras = (text) => {
+    return text.replace(
+      /Satoshi Nakamoto|instituições financeiras|blockchain|investimentos em criptomoedas têm riscos/gi,
+      (conexao) => `
+      <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
+    `
+    );
+  };
+
+  return (
+    <ContainerConteudo>
+      {paragraphs.map((paragraph, index) => (
+        <p
+          key={index}
+          dangerouslySetInnerHTML={{ __html: EstiloPalavras(paragraph) }}
+        />
+      ))}
+    </ContainerConteudo>
+  );
+};
 
 function oquesao() {
   const { oquesao } = conteudoData.conteudo[0];
@@ -16,11 +38,7 @@ function oquesao() {
         <span>O que são criptomoedas?</span>
       </h1>
       <BotoesContent />
-      <ContainerConteudo>
-        {paragraphs.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
-      </ContainerConteudo>
+      <EstiloJson paragraphs={paragraphs} />
       <Footer />
     </>
   );

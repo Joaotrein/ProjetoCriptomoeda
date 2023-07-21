@@ -7,7 +7,9 @@ function chatbot() {
     return (
         <>
             <Sidebar />
-                <h1>Chatbot</h1>
+            <h1 className='home-title'>
+                <span>Chatbot</span>
+            </h1>
             <Chatbot />          
         </>
     )   

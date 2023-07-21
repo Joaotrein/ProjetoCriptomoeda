@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { PaginaFormulario, Formulario, Mensagem } from './Login.jsx'
+import { PaginaFormulario, Formulario, Mensagem } from './Formularios.jsx'
 function Login() {
-    
+
     return (
         <>
             <PaginaFormulario>
@@ -23,7 +23,7 @@ function Login() {
                             Entrar</Link>
                     </button>
                     <Mensagem>Não possui conta? <Link to="Cadastrar">Cadastre-se!</Link></Mensagem>
-                    <Mensagem>Esqueci a minha senha!<Link to="Redefinir">Recuperar Senha!</Link></Mensagem>
+                    <Mensagem>Esqueci a minha senha!<Link to="Redefinir"> Recuperar Senha!</Link></Mensagem>
                 </Formulario>
             </PaginaFormulario>
         </>
