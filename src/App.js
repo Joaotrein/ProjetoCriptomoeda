@@ -10,25 +10,28 @@ import Seguras from './pages/Seguras/Seguras';
 import Existem from './pages/Existem/Existem';
 import Direitos from './pages/Direitos/Direitos';
 import Investir from './pages/Investir/Investir';
-import Chatbot from './pages/Chatbot/Chatbot';
+import Chatbot from './Components/Chatbot/Chatbot';
+
 
 function App() {
   return (
-   <Router>
-      <Routes>
-          <Route path='/' element={<Entrar/>} />
-          <Route path='/redefinir' element={<Redefinir/>} />
-          <Route path='/cadastrar' element={<Cadastrar/>} />
-          <Route path='/oquesao' element={<Oquesao/>} />
-          <Route path='/funcaomoeda' element={<Funcaomoeda/>} />
-          <Route path='/obter' element={<Obter/>} />
-          <Route path='/seguras' element={<Seguras/>} />
-          <Route path='/existem' element={<Existem/>} />
-          <Route path='/direitos' element={<Direitos/>} />
-          <Route path='/investir' element={<Investir/>} />
-          <Route path='/chatbot' element={<Chatbot/>} />
-      </Routes>
-   </Router>
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Entrar />} />
+          <Route path='/redefinir' element={<Redefinir />} />
+          <Route path='/cadastrar' element={<Cadastrar />} />
+          <Route path='/oquesao' element={<Oquesao />} />
+          <Route path='/funcaomoeda' element={<Funcaomoeda />} />
+          <Route path='/obter' element={<Obter />} />
+          <Route path='/seguras' element={<Seguras />} />
+          <Route path='/existem' element={<Existem />} />
+          <Route path='/direitos' element={<Direitos />} />
+          <Route path='/investir' element={<Investir />} />
+        </Routes>
+      </Router>
+      <Chatbot />
+    </>
   );
 }
 

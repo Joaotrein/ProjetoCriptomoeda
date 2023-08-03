@@ -61,11 +61,11 @@ function Sidebar({ iconeVerde }) {
                             <p><Link to="../investir">Como investir?</Link></p>
                         </ItemLista>
 
-                        <ItemLista>
+                        {/* <ItemLista>
                             <SiChatbot />
                             <i></i>
                             <p><Link to="../chatbot">Chatbot</Link></p>
-                        </ItemLista>
+                        </ItemLista> */}
 
                         <Line />
 
