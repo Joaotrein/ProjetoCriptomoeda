@@ -5,6 +5,7 @@ function Header(){
         <>
         <Cabecalho>
             <img src={bitcoin} alt="Criptomoeda"></img>
+            <h1>Cripto</h1><span>Educa</span>
         </Cabecalho>
         </>
     )

@@ -68,6 +68,7 @@
     margin: 10vh;
 
 } */
+
 h1 {
     display: flex;
     align-items: center;
@@ -83,7 +84,6 @@ h1 {
     overflow: hidden;
 
 }
-
 
 body {
     background-color: #00071f;

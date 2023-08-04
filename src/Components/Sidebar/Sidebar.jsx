@@ -4,7 +4,7 @@ export const Sidenav = styled.nav`
     position: fixed;
     height: 100vh;
     min-height: 500px;
-    width: 2.5vw;
+    width: 4%;
     top: 0;
     left: 0;
     background-color: #003296;
@@ -66,13 +66,13 @@ export const Lista = styled.ul`
 `
 
 export const ItemLista = styled.a`
-  width: 10vw;
+  width: 14vw;
   font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-decoration: none;
-  padding: 0.8vh 0.2vw;
+  padding: 0.8vh 0.48vw;
   color: #FFFFFF;
   cursor: pointer;
 

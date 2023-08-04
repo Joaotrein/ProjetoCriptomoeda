@@ -1,6 +1,6 @@
 import { Sidenav, Navegation, ItemLista, Lista, Logo, Line } from "./Sidebar.jsx";
 import bitcoin from "../../assets/bitcoin.png"
-import { SiChatbot } from "react-icons/si"
+// import { SiChatbot } from "react-icons/si"
 import { TbCoinBitcoin } from "react-icons/tb"
 import { AiOutlineQuestionCircle } from "react-icons/ai"
 import { BsWallet2, BsGraphUpArrow, BsShieldLock } from "react-icons/bs"
@@ -10,7 +10,7 @@ import { RxExit } from "react-icons/rx"
 import { Link } from 'react-router-dom'
 
 
-function Sidebar({ iconeVerde }) {
+function Sidebar () {
     return (
         <>
             <Sidenav>
