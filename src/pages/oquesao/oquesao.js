@@ -4,6 +4,7 @@ import Sidebar from '../../Components/Sidebar/Sidebar';
 import BotoesContent from '../../Components/BotoesContent/BotoesContent';
 import Footer from '../../Components/Footer/Footer';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
+import NewsApi from '../../CriptoNewsApi/ApiNews'
 
 const EstiloJson = ({ paragraphs }) => {
   const EstiloPalavras = (text) => {
@@ -39,6 +40,7 @@ function oquesao() {
       </h1>
       <BotoesContent />
       <EstiloJson paragraphs={paragraphs} />
+      < NewsApi />
       <Footer />
     </>
   );

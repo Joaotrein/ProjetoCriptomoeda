@@ -9,7 +9,7 @@ type CreateUserData = {
   name: string;
   email: string;
   password: string;
-};
+};  
 
 const createUserFormSchema = yup.object().shape({
   name: yup.string().required('Nome é obrigatório').min(6, 'Nome deve ter no mínimo 6 caracteres'),
