@@ -1,9 +1,8 @@
 import { Sidenav, Navegation, ItemLista, Lista, Logo, Line } from "./Sidebar.jsx";
 import bitcoin from "../../assets/bitcoin.png"
-// import { SiChatbot } from "react-icons/si"
 import { TbCoinBitcoin } from "react-icons/tb"
 import { AiOutlineQuestionCircle } from "react-icons/ai"
-import { BsWallet2, BsGraphUpArrow, BsShieldLock } from "react-icons/bs"
+import { BsWallet2, BsGraphUpArrow, BsShieldLock, BsNewspaper } from "react-icons/bs"
 import { TbCoins } from "react-icons/tb";
 import { MdBalance } from "react-icons/md"
 import { RxExit } from "react-icons/rx"
@@ -61,11 +60,11 @@ function Sidebar () {
                             <p><Link to="../investir">Como investir?</Link></p>
                         </ItemLista>
 
-                        {/* <ItemLista>
-                            <SiChatbot />
+                        <ItemLista>
+                            <BsNewspaper />
                             <i></i>
-                            <p><Link to="../chatbot">Chatbot</Link></p>
-                        </ItemLista> */}
+                            <p><Link to="../noticias">Notícias</Link></p>
+                        </ItemLista>
 
                         <Line />
 

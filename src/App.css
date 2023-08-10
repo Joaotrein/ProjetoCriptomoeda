@@ -82,7 +82,21 @@ h1 {
     text-align: center;
     line-height: 1;
     overflow: hidden;
+}
 
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFB800;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 900;
+    font-size: 2w;
+    padding: 4vh;
+    text-transform: uppercase;   
+    text-align: justify;
+    line-height: 1;
+    overflow: hidden;
 }
 
 body {

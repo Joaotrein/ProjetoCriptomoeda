@@ -4,9 +4,10 @@ import AreaNoticia from '../../src/CriptoNewsApi/ApiNews.jsx'
 
 export function NewsApi() {
     const [articles, setArticles] = useState([]);
-    const apikey = '00fdd8432c73e937542b5254153d8c2e';
+    // 00fdd8432c73e937542b5254153d8c2e
+    const apikey = ' ';
     const category = 'technology';
-    const url = 'https://gnews.io/api/v4/search?q=bitcoin&lang=pt&country=br&max=20&apikey=' + apikey;
+    const url = 'https://gnews.io/api/v4/search?q=bitcoin&lang=pt&country=br&max=10&apikey=' + apikey;
 
     useEffect(() => {
         fetch(url)
@@ -24,12 +25,11 @@ export function NewsApi() {
             <ContainerConteudo>
                 {articles && articles.map((article, index) => (
                     <AreaNoticia key={index}>
-                        <img src={article.image} alt={article.title}
-                        style={{width: '50%', display: 'flex', justifyContent: 'center', alignItems:'center'}} />
+                        <img src={article.image} alt={article.title}/>
                         <h2>{article.title}</h2>
                         <p>{article.description}</p>
-                        <p>{article.content}</p>
-                        <a href={article.url} target="_blank" rel="noopener noreferrer">Read More</a>
+                        <p>{article.content}</p>    
+                        <a href={article.url} target="_blank" rel="noopener noreferrer">Clique aqui para continuar lendo!</a>
                     </AreaNoticia>
                 ))}
             </ContainerConteudo>

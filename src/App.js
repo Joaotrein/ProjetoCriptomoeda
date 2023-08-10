@@ -10,7 +10,8 @@ import Seguras from './pages/Seguras/Seguras';
 import Existem from './pages/Existem/Existem';
 import Direitos from './pages/Direitos/Direitos';
 import Investir from './pages/Investir/Investir';
-import Chatbot from './Components/Chatbot/Chatbot';
+import Noticia from './pages/Noticias/Noticias';
+import Chatbot from './Components/Chatbot/Chatbot'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/existem' element={<Existem />} />
           <Route path='/direitos' element={<Direitos />} />
           <Route path='/investir' element={<Investir />} />
+          <Route path='/noticias' element={<Noticia />} />
         </Routes>
       </Router>
       <Chatbot />
