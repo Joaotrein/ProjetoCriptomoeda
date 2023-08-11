@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Rodape = styled.footer`
-    background-color: #003296;
+    background-color: var(--fundo-divisoes);
     width: 100%;
     height: 50%;
-    box-shadow: black 0 0 10px 0 ;
+    box-shadow: var(--preto) 0 0 10px 0 ;
 
     p{
-        color: white;
+        color: var(--branco);
         display: flex;
         text-align: center;
         justify-content: center;
@@ -15,5 +15,6 @@ export const Rodape = styled.footer`
         font-size: 12px;
         line-height: 0px;
     }
+
 `
 

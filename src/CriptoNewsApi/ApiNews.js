@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { ContainerConteudo } from '../Components/Conteudo/Conteudo.jsx';
-import AreaNoticia from '../../src/CriptoNewsApi/ApiNews.jsx'
+import AreaNoticia from '../../src/CriptoNewsApi/ApiNews.jsx';
 
 export function NewsApi() {
     const [articles, setArticles] = useState([]);
-    // 00fdd8432c73e937542b5254153d8c2e
-    const apikey = ' ';
+    const apikey = '00fdd8432c73e937542b5254153d8c2e';
     const category = 'technology';
-    const url = 'https://gnews.io/api/v4/search?q=bitcoin&lang=pt&country=br&max=10&apikey=' + apikey;
+    const url = 'https://gnews.io/api/v4/search?q=bitcoin&lang=pt&country=br&max=20&apikey=' + apikey;
+
+    const redirectToURL = (url) => {
+        window.open(url, '_blank');
+    };
 
     useEffect(() => {
         fetch(url)
@@ -26,10 +29,10 @@ export function NewsApi() {
                 {articles && articles.map((article, index) => (
                     <AreaNoticia key={index}>
                         <img src={article.image} alt={article.title}/>
-                        <h2>{article.title}</h2>
+                        <h1>{article.title}</h1>
                         <p>{article.description}</p>
-                        <p>{article.content}</p>    
-                        <a href={article.url} target="_blank" rel="noopener noreferrer">Clique aqui para continuar lendo!</a>
+                        <p>{article.content}</p>
+                        <button onClick={() => redirectToURL(article.url)}>Clique aqui para continuar lendo!</button>
                     </AreaNoticia>
                 ))}
             </ContainerConteudo>

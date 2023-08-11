@@ -60,15 +60,19 @@
     100% {transform: translateX(200%)}
 }
 
-/* .texto1{
-    font-size: 16px;
+:root{
+    /* Cores */
+    --preto: black;
+    --branco: white;
+    --fundo-azul-escuro: #00071f;
+    --fundo-conteudos: #ffffffeb;
+    --fundo-input:  #f2f2f2;
+    --fundo-divisoes: #003296;
+    --fundo-palavras-destaque: #FFB800;
+    --laranja-escuro: #dea20a;
+    --laranja-claro: #EBAB1C;
+    --vermelho: red;
 }
-
-.texto2{
-    margin: 10vh;
-
-} */
-
 h1 {
     display: flex;
     align-items: center;
@@ -102,19 +106,4 @@ h2 {
 body {
     background-color: #00071f;
 }
-
-/* ::-webkit-scrollbar {
-    width: 12px;
-    background-color: #f5f5f5;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #7e7e7e;
-    border-radius: 2px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #cd9300;
-  } */
-
   

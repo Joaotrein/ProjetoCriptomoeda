@@ -9,21 +9,21 @@ export const Formulario = styled.form`
   position: relative;
   z-index: 1;
   border-radius: 6px;
-  background: #003296;
+  background: var(--fundo-divisoes);
   max-width: 360px;
-  padding: 45px;
+  padding: 35px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 
-> h2 {
-  color: white;
+ h2 {
+  color: var(--branco);
   font-size: 30px;
   margin-bottom: 30px;
 }
 
 > input{
     outline: 0;
-    background: #f2f2f2;
+    background: var(--fundo-input);
     width: 100%;
     border: 0;
     border-radius: 6px;
@@ -36,33 +36,33 @@ export const Formulario = styled.form`
 
 > button a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: var(--branco);
 }
 
 > button{
     outline: 0;
-    background: #dea20a;
+    background: var(--laranja-escuro);
     width: 100%;
     border: 0;
     padding: 15px;
-    color: #FFFFFF;
+    color: var(--branco);
     font-weight: 700;
     font-size: 14px;
     border-radius: 6px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
-    &:hover{background: #EBAB1C;}
+    &:hover{background: var(--laranja-claro);}
 }
 `
 export const Mensagem = styled.p`
   margin: 15px 0 0;
-  color: white;
+  color: var(--branco);
   font-weight: 700;
   font-size: 14px;
 
-> a {
-  color: #FAB70B;
+a {
+  color: var(--fundo-palavras-destaque);
   text-decoration: none;
   &:hover{
     text-decoration: underline;
@@ -71,10 +71,10 @@ export const Mensagem = styled.p`
 `
 
 export const MensagemErro = styled.p`
-  color:red;
+  color: var(--vermelho);
   font-weight: 700;
   font-size: 12px;
-  background-color: #DBD9DB;
+  background-color: var(--fundo-input);
   border-radius: 9px;
   padding: 0.5vw;
   margin: 0 0 1vw 0;

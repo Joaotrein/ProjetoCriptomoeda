@@ -19,8 +19,8 @@ function Login() {
 
                     <button>
                         <Link to="oquesao">
-
-                            Entrar</Link>
+                        Entrar
+                        </Link>
                     </button>
                     <Mensagem>Não possui conta? <Link to="Cadastrar">Cadastre-se!</Link></Mensagem>
                     <Mensagem>Esqueci a minha senha!<Link to="Redefinir"> Recuperar Senha!</Link></Mensagem>

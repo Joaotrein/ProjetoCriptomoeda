@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Cabecalho = styled.div`
-    background-color: #003296;
+    background-color: var(--fundo-divisoes);
     box-shadow: 2px 8px 2px 1px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFB800;
+    color: var(--fundo-palavras-destaque);
     font-weight: 900;
     font-size: 3.2vw;
     text-transform: uppercase;

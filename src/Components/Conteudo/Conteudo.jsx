@@ -4,7 +4,7 @@ export const ContainerConteudo = styled.div`
   display: flex;
   padding: 2vw;
   margin-top: 10vh;
-  background-color: #ffffffeb;
+  background-color: var(--fundo-conteudos);
   width: 70%;
   margin: auto;
   border-radius: 15px 15px 0px 0px;

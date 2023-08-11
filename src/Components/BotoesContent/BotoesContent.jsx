@@ -10,8 +10,8 @@ export const BotaoConta = styled.button`
   margin: 1vw;
   border: none;
   cursor: pointer;
-  background-color: #00071f;
-  color: white;
+  background-color: var(--fundo-azul-escuro);
+  color: var(--branco);
 `;
 
 
@@ -24,17 +24,17 @@ export const BotaoConcluir = styled.button`
   margin: 1.5vw 7vw 0vw 0vw;
   border: none;
   cursor: pointer;
-  background-color: #00071f;
-  color: white;
+  background-color: var(--fundo-azul-escuro);
+  color: var(--branco);
 `
 
 export const MensagemHover = styled.span`
   position: absolute;
   margin-top: 8vh;
-  color: black;
+  color: var(--black);
   font-weight: 700;
   font-size: 12px;
-  background-color: white;
+  background-color: var(--branco);
   padding: 7px;
   border-radius: 3px;
 `;
