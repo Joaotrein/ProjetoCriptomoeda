@@ -9,7 +9,7 @@ import Footer from "../../Components/Footer/Footer";
 const EstiloJson = ({ paragraphs }) => {
   const EstiloPalavras = (text) => {
     return text.replace(
-      /milhares de criptomoedas diferentes|2009|Ethereum, Ripple, Litecoin, Bitcoin Cash, Cardano e muitas outras.|dinâmica e inovadora|diferenças significativas entre elas|A diversidade pode trazer oportunidades|Ripple|Criptografia:|baixo custo e alta velocidade|é importante entender suas diferenças/gi,
+      /milhares de criptomoedas diferentes|2009|dinâmica e inovadora|diferenças significativas entre elas|A diversidade pode trazer oportunidades|Ripple|Criptografia:|baixo custo e alta velocidade|é importante entender suas diferenças|Bitcoin| Ethereum|/gi,
       (conexao) => `
         <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
       `
@@ -31,7 +31,7 @@ const EstiloJson = ({ paragraphs }) => {
 const EstiloJsonComValores = ({ paragraphs, btcValor, ethValor }) => {
   const EstiloPalavras = (text) => {
     return text.replace(
-      /milhares de criptomoedas diferentes|2009|Ethereum, Ripple, Litecoin, Bitcoin Cash, Cardano e muitas outras.|dinâmica e inovadora|diferenças significativas entre elas|A diversidade pode trazer oportunidades|Ripple|Criptografia:|baixo custo e alta velocidade|é importante entender suas diferenças/gi,
+      /milhares de criptomoedas diferentes|dinâmica e inovadora|diferenças significativas entre elas|A diversidade pode trazer oportunidades|Ripple|Criptografia:|baixo custo e alta velocidade|é importante entender suas diferenças|Bitcoin| Ethereum|Litecoin| /gi,
       (conexao) => `
         <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
       `
