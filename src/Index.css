@@ -80,7 +80,7 @@ h1 {
     color: #fff;
     font-family: 'Work Sans', sans-serif;
     font-weight: 900;
-    font-size: 3.2vw;
+    font-size: 40px;
     padding: 4vh;
     text-transform: uppercase;   
     text-align: center;
@@ -106,4 +106,3 @@ h2 {
 body {
     background-color: #00071f;
 }
-  

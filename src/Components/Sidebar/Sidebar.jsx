@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Sidenav = styled.nav`
     position: fixed;
-    height: 100vh;
+    height: 100%;
     min-height: 500px;
     width: 4%;
     top: 0;
@@ -12,7 +12,7 @@ export const Sidenav = styled.nav`
     transition: 0.6s ease-in-out;
     box-shadow: black 0 0 10px 0 ;
     z-index: 1;
-
+  
     &:hover{
      width: 200px;
      overflow: visible;
