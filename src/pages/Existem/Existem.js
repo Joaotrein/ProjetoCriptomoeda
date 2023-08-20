@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import BotoesContent from "../../Components/BotoesContent/BotoesContent";
 import { ContainerConteudo } from '../../Components/Conteudo/Conteudo.jsx';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
 import Footer from "../../Components/Footer/Footer";
+import { TabelaPreco } from '../../CriptoPrecoApi/ApiMoeda';
 
 const EstiloJson = ({ paragraphs }) => {
   const EstiloPalavras = (text) => {
     return text.replace(
-      /milhares de criptomoedas diferentes|2009|dinâmica e inovadora|diferenças significativas entre elas|A diversidade pode trazer oportunidades|Ripple|Criptografia:|baixo custo e alta velocidade|é importante entender suas diferenças|Bitcoin| Ethereum|/gi,
+      /milhares de criptomoedas| 2009| |Bitcoin| |Ethereum|Ripple|Litecoin|Cardano|dinâmica e inovadora|estudar suas características|aplicativos descentralizados|mportante entender suas diferenças|preço atual|    /gi,
       (conexao) => `
-        <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
+        <b style="color: #dea20a; ">${conexao}</b>
       `
     );
   };
@@ -24,30 +24,7 @@ const EstiloJson = ({ paragraphs }) => {
           dangerouslySetInnerHTML={{ __html: EstiloPalavras(paragraph) }}
         />
       ))}
-    </ContainerConteudo>
-  );
-};
-
-const EstiloJsonComValores = ({ paragraphs, btcValor, ethValor }) => {
-  const EstiloPalavras = (text) => {
-    return text.replace(
-      /milhares de criptomoedas diferentes|dinâmica e inovadora|diferenças significativas entre elas|A diversidade pode trazer oportunidades|Ripple|Criptografia:|baixo custo e alta velocidade|é importante entender suas diferenças|Bitcoin| Ethereum|Litecoin| /gi,
-      (conexao) => `
-        <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
-      `
-    );
-  };
-
-  return (
-    <ContainerConteudo>
-      <p>Valor do Bitcoin: R$ {btcValor}</p>
-      <p>Valor do Ethereum: R$ {ethValor}</p>
-      {paragraphs.map((paragraph, index) => (
-        <p
-          key={index}
-          dangerouslySetInnerHTML={{ __html: EstiloPalavras(paragraph) }}
-        />
-      ))}
+          <TabelaPreco />
     </ContainerConteudo>
   );
 };
@@ -56,28 +33,6 @@ function Existem() {
   const { existem } = conteudoData.conteudo[4];
   const paragraphs = Object.values(existem[0]);
 
-  const [btcValor, setBtcValor] = useState('');
-  const [ethValor, setEthValor] = useState('');
-
-  useEffect(() => {
-    const moedas = 'BTC-BRL,ETH-BRL';
-    const url = `https://economia.awesomeapi.com.br/last/${moedas}`;
-
-    axios.get(url)
-      .then(response => {
-        const btcData = response.data['BTCBRL'];
-        const ethData = response.data['ETHBRL'];
-
-        if (btcData && ethData) {
-          setBtcValor(btcData.ask);
-          setEthValor(ethData.ask);
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }, []);
-
   return (
     <>
       <Sidebar />
@@ -85,11 +40,7 @@ function Existem() {
         <span>Quantas criptomoedas existem?</span>
       </h1>
       <BotoesContent />
-      {btcValor && ethValor ? (
-        <EstiloJsonComValores paragraphs={paragraphs} btcValor={btcValor} ethValor={ethValor} />
-      ) : (
-        <EstiloJson paragraphs={paragraphs} />
-      )}
+      <EstiloJson paragraphs={paragraphs} />
       <Footer />
     </>
   );

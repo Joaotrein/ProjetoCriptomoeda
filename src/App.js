@@ -1,4 +1,4 @@
-import './Index.css'
+import './Global.css'
 import Chatbot from './Components/Chatbot/Chatbot'
 import RouterPage from './Routes';
 
