@@ -1,11 +1,11 @@
 import React from 'react';
-import Sidebar from "../../Components/Sidebar/Sidebar";
+import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
 
 
 function investir() {
     return (
         <>
-            <Sidebar />
+            <SidebarHeader  />
 
             <h1 className='home-title'>
                 <span>Como investir em criptomoedas?</span>

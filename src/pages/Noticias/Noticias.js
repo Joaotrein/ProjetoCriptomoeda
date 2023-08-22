@@ -1,10 +1,10 @@
-import Sidebar from "../../Components/Sidebar/Sidebar";
+import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
 import NewsApi from "../../CriptoNewsApi/ApiNews"
 
 function Noticia() {
     return (
         <>
-            <Sidebar /> 
+            <SidebarHeader />
 
             <h1 className='home-title'>
                 <span>Notícias sobre Criptomoedas</span>

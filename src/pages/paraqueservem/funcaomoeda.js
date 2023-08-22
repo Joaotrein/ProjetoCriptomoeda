@@ -1,6 +1,6 @@
 import React from 'react';
 import { ContainerConteudo } from '../../Components/Conteudo/Conteudo'
-import Sidebar from '../../Components/Sidebar/Sidebar';
+import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
 import BotoesContent from '../../Components/BotoesContent/BotoesContent';
 import Footer from '../../Components/Footer/Footer';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
@@ -34,7 +34,7 @@ function paraqueservem() {
   const paragraphs = Object.values(paraqueservem[0]);
   return (
     <>
-      <Sidebar />
+      <SidebarHeader />
 
       <h1 className='home-title'>
         <span>Para que servem as criptomoedas?</span>

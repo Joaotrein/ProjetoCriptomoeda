@@ -1,84 +1,38 @@
-import { Sidenav, Navegation, ItemLista, Lista, Logo, Line } from "./Sidebar.jsx";
-import bitcoin from "../../assets/bitcoin.png"
-import { TbCoinBitcoin } from "react-icons/tb"
-import { AiOutlineQuestionCircle } from "react-icons/ai"
-import { BsWallet2, BsGraphUpArrow, BsShieldLock, BsNewspaper } from "react-icons/bs"
-import { TbCoins } from "react-icons/tb";
-import { MdBalance } from "react-icons/md"
-import { RxExit } from "react-icons/rx"
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component
+import { Container, Content } from './Sidebar.jsx';
+import { TbCoinBitcoin } from 'react-icons/tb';
+import { AiOutlineQuestionCircle } from 'react-icons/ai';
+import { BsWallet2, BsGraphUpArrow, BsShieldLock, BsNewspaper } from 'react-icons/bs';
+import { TbCoins } from 'react-icons/tb';
+import { MdBalance } from 'react-icons/md';
+import { RxExit } from 'react-icons/rx';
+import { FaTimes } from 'react-icons/fa';
 
+import SidebarItem from '../SidebarItem/SidebarItem';
 
-function Sidebar () {
-    return (
-        <>
-            <Sidenav>
-                <Navegation>
-                    <Lista>
-                        <Logo>
-                            <img src={bitcoin} alt="Criptomoeda BITCOIN" />
-                        </Logo>
-                        <ItemLista>
-                            <TbCoinBitcoin />
-                            <i></i>
-                            <p><Link to="../oquesao">O que são criptomoedas?</Link></p>
-                        </ItemLista>
+const Sidebar = ({ active }) => {
 
-                        <ItemLista>
-                            <AiOutlineQuestionCircle />
-                            <i></i>
-                            <p><Link to="../funcaomoeda">Para que elas servem?</Link></p>
-                        </ItemLista>
+  const closeSidebar = () => {
+    active(false);
+  }
 
-                        <ItemLista>
-                            <BsWallet2 />
-                            <i></i>
-                            <p><Link to="../obter">Como posso obte-lás?</Link></p>
-                        </ItemLista>
-
-                        <ItemLista>
-                            <BsShieldLock />
-                            <i></i>
-                            <p><Link to="../seguras">Elas são seguras?</Link></p>
-                        </ItemLista>
-
-                        <ItemLista>
-                            <TbCoins />
-                            <i></i>
-                            <p><Link to="../existem">Quantas existem</Link></p>
-                        </ItemLista>
-
-                        <ItemLista>
-                            <MdBalance />
-                            <i></i>
-                            <p><Link to="../direitos">Quais direitos eu possuo?</Link></p>
-                        </ItemLista>
-
-                        <ItemLista>
-                            <BsGraphUpArrow />
-                            <i></i>
-                            <p><Link to="../investir">Como investir?</Link></p>
-                        </ItemLista>
-
-                        <ItemLista>
-                            <BsNewspaper />
-                            <i></i>
-                            <p><Link to="../noticias">Notícias</Link></p>
-                        </ItemLista>
-
-                        <Line />
-
-                        <ItemLista>
-                            <RxExit />
-                            <i></i>
-                            <p><Link to="../">Sair</Link></p>
-                        </ItemLista>
-                    </Lista>
-                </Navegation>
-            </Sidenav>
-        </>
-    )
-
+  return (
+    <Container sidebar={active}>
+      <FaTimes onClick={closeSidebar} />
+      <Content>
+        <SidebarItem Icon={TbCoinBitcoin} Text={<Link to="../oquesao">O que são criptomoedas?</Link>} />
+        <SidebarItem Icon={AiOutlineQuestionCircle} Text={<Link to="../funcaomoeda">Para que elas servem?</Link>} />
+        <SidebarItem Icon={BsWallet2} Text={<Link to="../obter">Como posso obte-lás?</Link>} />
+        <SidebarItem Icon={BsShieldLock} Text={<Link to="../seguras">Elas são seguras?</Link>} />
+        <SidebarItem Icon={TbCoins} Text={<Link to="../existem">Quantas existem</Link>} />
+      <SidebarItem Icon={MdBalance} Text={<Link to="../direitos">Quais direitos eu possuo?</Link>} />
+        <SidebarItem Icon={BsGraphUpArrow} Text={<Link to="../investir">Como investir?</Link>} />
+        <SidebarItem Icon={BsNewspaper} Text={<Link to="../noticias">Notícias</Link>} />
+        <SidebarItem Icon={RxExit} Text={<Link to="../">Sair</Link>} />
+      </Content>
+    </Container>
+  )
 }
 
-export default Sidebar
+export default Sidebar;

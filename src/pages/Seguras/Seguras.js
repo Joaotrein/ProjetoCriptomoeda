@@ -1,48 +1,48 @@
 import React from 'react';
-import Sidebar from "../../Components/Sidebar/Sidebar";
+import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
 import BotoesContent from '../../Components/BotoesContent/BotoesContent';
 import { ContainerConteudo } from '../../Components/Conteudo/Conteudo.jsx';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
 import Footer from '../../Components/Footer/Footer';
 
 const EstiloJson = ({ paragraphs }) => {
-    const EstiloPalavras = (text) => {
-      return text.replace(
-        /Blockchain e Descentralização:|ataques cibernéticos.|Controle de Chaves Privadas:|uma pública e outra privada|Vulnerabilidades e Hacks:|Responsabilidade Individual:|alto nível de segurança|Criptografia:|criptografia avançados|moeda digital|as criptomoedas são notavelmente seguras/gi,
-        (conexao) => `
+  const EstiloPalavras = (text) => {
+    return text.replace(
+      /Blockchain e Descentralização:|ataques cibernéticos.|Controle de Chaves Privadas:|uma pública e outra privada|Vulnerabilidades e Hacks:|Responsabilidade Individual:|alto nível de segurança|Criptografia:|criptografia avançados|moeda digital|as criptomoedas são notavelmente seguras/gi,
+      (conexao) => `
         <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
       `
-      );
-    };
-  
-    return (
-      <ContainerConteudo>
-        {paragraphs.map((paragraph, index) => (
-          <p
-            key={index}
-            dangerouslySetInnerHTML={{ __html: EstiloPalavras(paragraph) }}
-          />
-        ))}
-      </ContainerConteudo>
     );
   };
 
+  return (
+    <ContainerConteudo>
+      {paragraphs.map((paragraph, index) => (
+        <p
+          key={index}
+          dangerouslySetInnerHTML={{ __html: EstiloPalavras(paragraph) }}
+        />
+      ))}
+    </ContainerConteudo>
+  );
+};
+
 
 function Seguras() {
-    const { seguras } = conteudoData.conteudo[3];
-    const paragraphs = Object.values(seguras[0]);
-    return (
-        <>
-            <Sidebar />
+  const { seguras } = conteudoData.conteudo[3];
+  const paragraphs = Object.values(seguras[0]);
+  return (
+    <>
+      <SidebarHeader />
 
-            <h1 className='home-title'>
-                <span>As criptomoedas são seguras?</span>
-            </h1>
-            <BotoesContent />
-            <EstiloJson paragraphs={paragraphs} />
-            <Footer />
-        </>
-    )
+      <h1 className='home-title'>
+        <span>As criptomoedas são seguras?</span>
+      </h1>
+      <BotoesContent />
+      <EstiloJson paragraphs={paragraphs} />
+      <Footer />
+    </>
+  )
 }
 
 export default Seguras;

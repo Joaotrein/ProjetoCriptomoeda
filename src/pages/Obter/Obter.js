@@ -1,4 +1,4 @@
-import Sidebar from "../../Components/Sidebar/Sidebar";
+import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
 import BotoesContent from "../../Components/BotoesContent/BotoesContent";
 import { ContainerConteudo } from '../../Components/Conteudo/Conteudo.jsx';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
@@ -31,7 +31,7 @@ function obter() {
     const paragraphs = Object.values(obter[0]);
     return (
         <>
-            <Sidebar />
+            <SidebarHeader />
 
             <h1 className='home-title'>
                 <span>Como obter Criptomoedas?</span>
