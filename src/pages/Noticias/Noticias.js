@@ -7,7 +7,7 @@ function Noticia() {
             <SidebarHeader />
 
             <h1 className='home-title'>
-                <span>Notícias sobre Criptomoedas</span>
+                Notícias sobre Criptomoedas
             </h1>
             <NewsApi />
         </>

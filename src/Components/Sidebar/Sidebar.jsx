@@ -19,7 +19,7 @@ const slideOut = keyframes`
 `;
 
 export const Container = styled.div`
-  background-color: var(--fundo-azul-escuro);
+  background-color: var(--fundo-divisoes);
   position: fixed;
   height: 100%;
   top: 0;

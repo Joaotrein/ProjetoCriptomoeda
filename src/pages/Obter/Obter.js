@@ -34,7 +34,7 @@ function obter() {
             <SidebarHeader />
 
             <h1 className='home-title'>
-                <span>Como obter Criptomoedas?</span>
+                Como obter Criptomoedas?
             </h1>
             <BotoesContent />
             <EstiloJson paragraphs={paragraphs} />

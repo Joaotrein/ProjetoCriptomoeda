@@ -1,14 +1,14 @@
 import React from 'react';
-import Sidebar from "../../Components/Sidebar/Sidebar";
+import SidebarHeader from "../../Components/SidebarHeader/SidebarHeader";
 
 
 function direitos() {
     return (
         <>
-            <Sidebar />
+            <SidebarHeader />
 
             <h1 className='home-title'>
-                <span>Quais direitos eu possuo?</span>
+              Quais direitos eu possuo?
             </h1>
            
         </>

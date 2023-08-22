@@ -37,7 +37,7 @@ function paraqueservem() {
       <SidebarHeader />
 
       <h1 className='home-title'>
-        <span>Para que servem as criptomoedas?</span>
+        Para que servem as criptomoedas?
       </h1>
       <BotoesContent />
       <EstiloJson paragraphs={paragraphs} />

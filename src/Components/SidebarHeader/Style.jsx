@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 50px;
+  height: 30px;
   display: flex;
 
   > svg {

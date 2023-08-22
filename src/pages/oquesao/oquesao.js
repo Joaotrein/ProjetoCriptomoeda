@@ -36,7 +36,7 @@ function oquesao() {
     <>
       <SidebarHeader />
       <h1 className='home-title'>
-        <span>O que são criptomoedas?</span>
+        O que são criptomoedas?
       </h1>
       <BotoesContent />
       <EstiloJson paragraphs={paragraphs} />

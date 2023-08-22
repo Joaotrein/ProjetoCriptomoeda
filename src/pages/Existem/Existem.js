@@ -37,7 +37,7 @@ function Existem() {
     <>
       <SidebarHeader />
       <h1 className='home-title'>
-        <span>Quantas criptomoedas existem?</span>
+        Quantas criptomoedas existem?
       </h1>
       <BotoesContent />
       <EstiloJson paragraphs={paragraphs} />

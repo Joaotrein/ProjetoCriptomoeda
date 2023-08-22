@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Cabecalho = styled.div`
+    width: 100%;
     background-color: var(--fundo-divisoes);
     box-shadow: 2px 8px 2px 1px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -9,7 +10,7 @@ export const Cabecalho = styled.div`
     height: 15vh;
 
 > img {
-    width: 7vw;
+    width: 100px;
     padding: 10px;
     left: 0;
     position: absolute;
@@ -25,27 +26,10 @@ span{
     justify-content: center;
     color: var(--fundo-palavras-destaque);
     font-weight: 900;
-    font-size: 3.2vw;
+    font-size: 40px;
     text-transform: uppercase;
    
 }
 `
-
-export const Container = styled.div`
-  height: 100px;
-  display: flex;
-  background-color: #1A202C; 
-  box-shadow: 0 0 20px 3px;
-
-  > svg {
-    position: fixed;
-    color: white;
-    width: 30px;
-    height: 30px;
-    margin-top: 32px;
-    margin-left: 32px;
-    cursor: pointer;
-  }
-`;
 
 

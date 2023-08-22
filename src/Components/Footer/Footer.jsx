@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Rodape = styled.footer`
     background-color: var(--fundo-divisoes);
     width: 100%;
-    height: 50%;
     box-shadow: var(--preto) 0 0 10px 0 ;
 
     p{
@@ -11,7 +10,7 @@ export const Rodape = styled.footer`
         display: flex;
         text-align: center;
         justify-content: center;
-        padding: 1vw 0 1vw 0vw;
+        padding: 20px;
         font-size: 12px;
         line-height: 0px;
     }
