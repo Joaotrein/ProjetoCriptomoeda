@@ -4,8 +4,7 @@ import { Cardnoticia, CardContainer } from '../../src/CriptoNewsApi/ApiNews.jsx'
 export function NewsApi() {
     const [articles, setArticles] = useState([]);
     const apikey = '00fdd8432c73e937542b5254153d8c2e';
-    const category = 'technology';
-    const url = 'https://gnews.io/api/v4/search?q=bitcoin&lang=pt&country=br&max=10&apikey=' + apikey;
+    const url = 'https://gnews.io/api/v4/search?q=bitcoin&lang=pt&country=br&max=20&apikey=' + apikey;
 
     const redirectToURL = (url) => {
         window.open(url, '_blank');

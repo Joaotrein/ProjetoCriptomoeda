@@ -8,9 +8,11 @@ function direitos() {
             <SidebarHeader />
 
             <h1 className='home-title'>
-              Quais direitos eu possuo?
+              <span>Quais direitos eu possuo?</span>
             </h1>
            
+            {/* Ainda estou produzindo o conteúdo desta página aqui */}
+            
         </>
     )   
 }

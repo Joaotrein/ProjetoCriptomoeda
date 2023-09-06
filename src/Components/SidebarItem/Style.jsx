@@ -7,7 +7,7 @@ export const Container = styled.div`
   color: white;
   padding: 8px;
   cursor: pointer;
-  margin: 0 0px 20px;
+  margin: 0 0px 15px;
 
   a{ 
   text-decoration: none;

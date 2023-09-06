@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import the Link component
+import { Link } from 'react-router-dom'; 
 import { Container, Content } from './Sidebar.jsx';
 import { TbCoinBitcoin } from 'react-icons/tb';
 import { AiOutlineQuestionCircle } from 'react-icons/ai';

@@ -1,6 +1,5 @@
 import React from 'react';
 import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
-import BotoesContent from '../../Components/BotoesContent/BotoesContent';
 import { ContainerConteudo } from '../../Components/Conteudo/Conteudo.jsx';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
 import Footer from '../../Components/Footer/Footer';
@@ -38,7 +37,7 @@ function Seguras() {
       <h1 className='home-title'>
         <span>As criptomoedas são seguras?</span>
       </h1>
-      <BotoesContent />
+     
       <EstiloJson paragraphs={paragraphs} />
       <Footer />
     </>

@@ -1,5 +1,4 @@
 import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
-import BotoesContent from "../../Components/BotoesContent/BotoesContent";
 import { ContainerConteudo } from '../../Components/Conteudo/Conteudo.jsx';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
 import Footer from "../../Components/Footer/Footer";
@@ -34,9 +33,8 @@ function obter() {
             <SidebarHeader />
 
             <h1 className='home-title'>
-                Como obter Criptomoedas?
+                <span>Como obter Criptomoedas?</span>
             </h1>
-            <BotoesContent />
             <EstiloJson paragraphs={paragraphs} />
             <Footer />
         </>

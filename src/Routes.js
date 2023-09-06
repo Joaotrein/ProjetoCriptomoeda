@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Entrar from './pages/Entrar/Entrar';
 import Cadastrar from './pages/Cadastrar/Cadastrar';
 import Redefinir from './pages/Redefinir/Redefinir';
-import Oquesao from './pages/oquesao/oquesao';
-import Funcaomoeda from "./pages/paraqueservem/funcaomoeda";
+import Oquesao from './pages/Oquesao/Oquesao';
+import Funcaomoeda from "./pages/Paraqueservem/Funcaomoeda";
 import Obter from './pages/Obter/Obter';
 import Seguras from './pages/Seguras/Seguras';
 import Existem from './pages/Existem/Existem';

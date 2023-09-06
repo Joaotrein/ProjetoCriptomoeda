@@ -8,8 +8,10 @@ function investir() {
             <SidebarHeader  />
 
             <h1 className='home-title'>
-               Como investir em criptomoedas?
+               <span>Como investir em criptomoedas?</span>
             </h1>
+
+            {/* Ainda estou produzindo o conteúdo desta página aqui */}
             
         </>
     )   

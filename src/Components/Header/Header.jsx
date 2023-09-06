@@ -10,7 +10,7 @@ export const Cabecalho = styled.div`
     height: 15vh;
 
 > img {
-    width: 100px;
+    width: 90px;
     padding: 10px;
     left: 0;
     position: absolute;
