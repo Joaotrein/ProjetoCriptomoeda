@@ -4,6 +4,10 @@ export const PaginaFormulario = styled.div`
   width: 360px;
   padding: 4vw 0 0;
   margin: auto;
+
+  @media(max-width: 425px){
+    width: 250px;
+  }
 `
 export const Formulario = styled.form`
   position: relative;
@@ -18,7 +22,7 @@ export const Formulario = styled.form`
  h2 {
   color: var(--branco);
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 > input{
@@ -54,6 +58,13 @@ export const Formulario = styled.form`
     cursor: pointer;
     &:hover{background: var(--laranja-claro);}
 }
+
+@media(max-width: 425px){
+    h2 {
+      font-size: 30px;
+      margin-bottom: 0px;
+    }
+  }
 `
 export const Mensagem = styled.p`
   margin: 15px 0 0;
@@ -68,6 +79,7 @@ a {
     text-decoration: underline;
   }
 }
+
 `
 
 export const MensagemErro = styled.p`

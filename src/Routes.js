@@ -10,6 +10,7 @@ import Existem from './pages/Existem/Existem';
 import Direitos from './pages/Direitos/Direitos';
 import Investir from './pages/Investir/Investir';
 import Noticia from './pages/Noticias/Noticias';
+import Chatbot from './pages/Chatbot/Chatbot';
 
 
 function RouterPage() {
@@ -28,6 +29,7 @@ function RouterPage() {
                     <Route path='/direitos' element={<Direitos />} />
                     <Route path='/investir' element={<Investir />} />
                     <Route path='/noticias' element={<Noticia />} />
+                    <Route path='/chatbot' element={<Chatbot />} />
                 </Routes>
             </Router>
         </>
