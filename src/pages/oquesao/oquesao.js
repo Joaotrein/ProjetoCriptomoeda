@@ -39,14 +39,6 @@ function oquesao() {
       </h1>
 
       <EstiloJson paragraphs={paragraphs} />
-      <iframe
-        title="Chatbot"
-        src="https://joaotrein.github.io/ChatbotDialogFlow/" // Substitua pelo URL do seu arquivo HTML hospedado
-        width="100%"
-        height="700px"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
       <Footer />
     </>
   );
