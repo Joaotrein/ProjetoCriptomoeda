@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Content } from './Sidebar.jsx';
+import { Container, Content } from './Style.jsx';
 import { TbCoinBitcoin } from 'react-icons/tb';
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
 import { BsWallet2, BsGraphUpArrow, BsShieldLock, BsNewspaper, BsRobot } from 'react-icons/bs';

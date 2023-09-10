@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { PaginaFormulario, Formulario, Mensagem, MensagemErro} from '../Login/Formularios.jsx';
+import { PaginaFormulario, Formulario, Mensagem, MensagemErro} from '../Login/Style.jsx';
 import React from 'react';
 import * as yup from 'yup';
 import { yupResolver } from "@hookform/resolvers/yup";

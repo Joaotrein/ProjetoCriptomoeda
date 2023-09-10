@@ -1,4 +1,4 @@
-import { Rodape } from "./Footer.jsx"
+import { Rodape } from "./Style.jsx"
  
 function Footer() {
   return (

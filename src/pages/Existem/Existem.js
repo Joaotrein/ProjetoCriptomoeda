@@ -1,7 +1,7 @@
 import React from 'react';
 import SidebarHeader from "../../Components/SidebarHeader/SidebarHeader";
-import BotoesContent from "../../Components/BotoesContent/BotoesContent";
-import { ContainerConteudo } from '../../Components/Conteudo/Conteudo.jsx';
+// import BotoesContent from "../../Components/BotoesContent/BotoesContent";
+import { ContainerConteudo } from '../../Components/Conteudo/Style.jsx';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
 import Footer from "../../Components/Footer/Footer";
 import { TabelaPreco } from '../../CriptoPrecoApi/ApiMoeda';
@@ -9,7 +9,7 @@ import { TabelaPreco } from '../../CriptoPrecoApi/ApiMoeda';
 const EstiloJson = ({ paragraphs }) => {
   const EstiloPalavras = (text) => {
     return text.replace(
-      /milhares de criptomoedas| 2009| |Bitcoin| |Ethereum|Ripple|Litecoin|Cardano|dinâmica e inovadora|estudar suas características|aplicativos descentralizados|mportante entender suas diferenças|preço atual|    /gi,
+      /milhares de criptomoedas| 2009| |Bitcoin| |Ethereum|Ripple|Litecoin|Cardano|dinâmica e inovadora|estudar suas características|aplicativos descentralizados|mportante entender suas diferenças|preço atual|/gi,
       (conexao) => `
         <b style="color: #dea20a; ">${conexao}</b>
       `

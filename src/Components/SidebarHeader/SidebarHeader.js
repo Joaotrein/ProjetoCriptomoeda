@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container } from './Style'
+import { Container } from './Style.jsx'
 import { FaBars } from 'react-icons/fa'
 import Sidebar from '../Sidebar/Sidebar'
 

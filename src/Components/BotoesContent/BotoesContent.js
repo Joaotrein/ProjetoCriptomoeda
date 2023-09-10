@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BotaoConcluir, BotaoConta, MensagemHover } from './BotoesContent.jsx';
+import { BotaoConcluir, BotaoConta, MensagemHover } from './Style.jsx';
 import { MdAccountCircle } from "react-icons/md";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 

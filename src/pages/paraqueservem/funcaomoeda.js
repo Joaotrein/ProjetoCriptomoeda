@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContainerConteudo } from '../../Components/Conteudo/Conteudo'
+import { ContainerConteudo } from '../../Components/Conteudo/Style.jsx'
 import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
 import Footer from '../../Components/Footer/Footer';
 import conteudoData from '../../ConteudoJson/Conteudo.json';
@@ -7,7 +7,7 @@ import conteudoData from '../../ConteudoJson/Conteudo.json';
 const EstiloJson = ({ paragraphs }) => {
   const EstiloPalavras = (text) => {
     return text.replace(
-      /Meio de Pagamento:|Transferências Internacionais:|Investimento:|Proteção contra Inflação:|se informem adequadamente/gi,
+      /Meio de Pagamento:|Transferências Internacionais:|Investimento:|Proteção contra Inflação:|se informem adequadamente|Privacidade Financeira:|Inclusão Financeira:|Desenvolvimento Tecnológico:/gi,
       (conexao) => `
       <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
       `
@@ -38,7 +38,7 @@ function paraqueservem() {
       <h1 className='home-title'>
         <span>Para que servem as criptomoedas?</span>
       </h1>
-  
+
       <EstiloJson paragraphs={paragraphs} />
       <Footer />
     </>

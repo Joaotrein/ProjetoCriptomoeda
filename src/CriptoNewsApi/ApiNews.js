@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Cardnoticia, CardContainer } from '../../src/CriptoNewsApi/ApiNews.jsx';
+import { Cardnoticia, CardContainer } from '../../src/CriptoNewsApi/Style.jsx';
 
 export function NewsApi() {
     const [articles, setArticles] = useState([]);

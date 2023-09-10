@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { PaginaFormulario, Formulario, Mensagem } from './Formularios.jsx'
+import { PaginaFormulario, Formulario, Mensagem } from './Style.jsx'
 function Login() {
 
     return (

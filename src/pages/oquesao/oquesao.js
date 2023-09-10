@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContainerConteudo } from '../../Components/Conteudo/Conteudo'
+import { ContainerConteudo } from '../../Components/Conteudo/Style.jsx'
 import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
 import Footer from '../../Components/Footer/Footer';
 import conteudoData from '../../ConteudoJson/Conteudo.json';

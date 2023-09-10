@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabela } from './style';
+import { Tabela } from './Style.jsx';
 import axios from 'axios';
 
 const moedas = 'BTC-BRL,ETH-BRL,LTC-BRL,XRP-BRL'; // Only Bitcoin, Ethereum, Litecoin, and Ripple
