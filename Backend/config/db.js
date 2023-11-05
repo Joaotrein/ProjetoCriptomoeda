@@ -1,24 +1,29 @@
+// Importando o módulo dotenv para carregar variáveis de ambiente do arquivo .env
+require("dotenv").config();
+
+// Importando a biblioteca mongoose para se conectar ao MongoDB
 const mongoose = require("mongoose");
 
-//Conexão
+// Importando as variáveis de ambiente definidas no arquivo .env
+const IP = process.env.IP_DB; // Endereço do MongoDB
+const CollectionDb = process.env.CollectioDbName; // Nome da coleção do banco de dados
 
-const dbUser = process.env.DB_USER;
-const dbPassword = process.env.DB_PASS;
-
-const conn = async () => {
+// Função para conectar com o banco de dados
+const connectToDatabase = async () => {
     try {
+        // Tentativa de conexão com o MongoDB usando o endereço IP e nome da coleção
         const dbConn = await mongoose.connect(
-            `mongodb+srv://${dbUser}:${dbPassword}@projeto.c6kqs2v.mongodb.net/?retryWrites=true&w=majority`
+            `mongodb://${IP}/${CollectionDb}`
         );
-
-        console.log("Conectou ao banco!");
-
-        return dbConn;
+        console.log("O Banco de dados foi conectado!"); // Mensagem de sucesso
+        return dbConn; // Retorna a conexão com o banco de dados
     } catch (error) {
-        console.log(error);
+        console.error("Houve um erro:", error); // Registra e exibe um erro se a conexão falhar
+        throw error; // Lança o erro novamente para que o código que chama essa função possa tratá-lo, se necessário.
     }
 };
 
-conn();
+// Invocando a função para conectar ao banco de dados
+connectToDatabase();
 
-module.exports = conn;
+module.exports = connectToDatabase; // Exporta a função de conexão com o banco de dados

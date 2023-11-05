@@ -18,8 +18,8 @@ function RouterPage() {
         <>
             <Router>
                 <Routes>
-                    <Route path="/" element={<Register />} />
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/" element={<Login />} />
                     <Route path="/oquesao" element={<Oquesao />} />
                     <Route path="/funcaomoeda" element={<Funcaomoeda />} />
                     <Route path="/obter" element={<Obter />} />

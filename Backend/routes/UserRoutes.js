@@ -1,30 +1,31 @@
 const express = require("express");
 const router = express.Router();
+const loginController = require("../controllers/UserLoginController");
+const createAccountController = require("../controllers/UserRegister");
+const updateController = require("../controllers/UserUpdate");
+const deleteAccountController = require("../controllers/UserDelete");
 
-//Controller
-const {
-    register,
-    login,
-    getCurrentUser,
-    update,
-    getUserbyId,
-} = require("../controllers/UserController");
-
-//Middlewares
-
-const validate = require("../middlewares/handleValidation");
+// Importando funções de validação para as rotas
 const {
     userCreateValidation,
-    loginValitation,
+    loginValidation,
     userUpdateValidation,
 } = require("../middlewares/userValidations");
-const authGuard = require("../middlewares/authGuard");
 
-//Routes
-router.post("/register", userCreateValidation(), validate, register); // Aqui o validate esta fazendo o intermediario entre o banco e o register, assim, caso ocorra qualquer erro com o servidor, o middleware vai validar ele e mostrar para o usuário no front.
-router.post("/login", loginValitation(), validate, login);
-router.get("/profile", authGuard, getCurrentUser);
-router.put("/", authGuard, userUpdateValidation(), validate, update);
-router.get("/:id", getUserbyId);
+// Importando o middleware de validação customizado
+const validate = require("../middlewares/handleValidation");
 
+// Rota para criar uma conta de usuário com validação
+router.post("/register", userCreateValidation(), validate, createAccountController);
+
+// Rota para autenticar um usuário com validação
+router.post("/login", loginValidation(), validate, loginController);
+
+// Rota para atualizar dados da conta de usuário com validação
+router.put("/updateInformations", userUpdateValidation(), updateController);
+
+// Rota para excluir uma conta de usuário
+router.delete("/deleteAccount", deleteAccountController);
+
+// Exportando o roteador para ser utilizado em outros lugares da aplicação
 module.exports = router;
