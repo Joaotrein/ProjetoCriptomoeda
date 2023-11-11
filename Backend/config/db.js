@@ -15,11 +15,11 @@ const connectToDatabase = async () => {
         const dbConn = await mongoose.connect(
             `mongodb://${IP}/${CollectionDb}`
         );
-        console.log("O Banco de dados foi conectado!"); // Mensagem de sucesso
-        return dbConn; // Retorna a conexão com o banco de dados
+        console.log("O Banco de dados foi conectado!");
+        return dbConn;
     } catch (error) {
         console.error("Houve um erro:", error); // Registra e exibe um erro se a conexão falhar
-        throw error; // Lança o erro novamente para que o código que chama essa função possa tratá-lo, se necessário.
+        throw error;
     }
 };
 

@@ -1,67 +1,121 @@
-import { useEffect, useState } from "react";
+// Importações
+import { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { Link, useNavigate } from "react-router-dom";
+import Header from "../../Components/Header/Header";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+import {
+    Button,
+    CampoSenha,
+    FormArea,
+    Forms,
+    VizualizarSenha,
+    ErrorMessage,
+} from "./Style";
+
+// Componente Login
 const Login = () => {
-  const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [verSenha, setVerSenha] = useState(false);
+    const [errors, setErrors] = useState("");
+    const navigate = useNavigate();
+    const notify = () => {
+        toast.success("Login bem-sucedido! Indo para o primerio conteúdo!", {
+            position: "top-left",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: "light",
+        });
+    };
 
-    if (!email || !password) {
-      setError("Por favor, preencha todos os campos.");
-      return;
-    }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    try {
-      const response = await axios.post("http://localhost:3000/", {
-        email,
-        password,
-      });
+        setErrors([]);
 
-      if (response.data.token) {
-        // Token gerado com sucesso, redirecione o usuário
-        localStorage.setItem("token", response.data.token);
-        navigate("/oquesao", { state: { id: email } });
-      } else if (response.data === "notexist") {
-        setError("Usuário não cadastrado.");
-      } else {
-        setError("Credenciais incorretas.");
-      }
-    } catch (e) {
-      setError("Ocorreu um erro ao processar a solicitação.");
-      console.error(e);
-    }
-  }
+        const userData = {
+            email: email,
+            password: password,
+        };
 
-  return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-          />
-        </label>
-        <label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-          />
-        </label>
-        {error && <p>{error}</p>}
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
+        try {
+            const response = await axios.post(
+                "http://localhost:8000/api/users/login",
+                userData
+            );
+
+            if (response.status === 200) {
+                const token = response.data.token;
+                localStorage.setItem("token", token);
+                notify()
+                setTimeout(() => {
+                    navigate("/oquesao");
+                }, 3550);
+            }
+        } catch (error) {
+            setErrors(["Credenciais incorretas"]);
+        }
+    };
+
+    const clicarVerSenha = () => {
+        setVerSenha(!verSenha);
+    };
+
+    return (
+        <>
+            <Header />
+            <FormArea>
+                <Forms onSubmit={handleSubmit}>
+                    <h2>Login</h2>
+                    <label>
+                        <p>E-mail</p>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </label>
+                    <label>
+                        <p>Senha</p>
+                        <CampoSenha>
+                            <input
+                                type={verSenha ? "text" : "password"}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                            <VizualizarSenha onClick={clicarVerSenha}>
+                                <FontAwesomeIcon
+                                    icon={verSenha ? faEye : faEyeSlash}
+                                />
+                            </VizualizarSenha>
+                        </CampoSenha>
+                    </label>
+                    <Button type="submit">Login</Button>
+
+                    {errors && (
+                        <ErrorMessage>
+                            <p>{errors}</p>
+                        </ErrorMessage>
+                    )}
+
+                    <span>
+                        Não tem conta?
+                        <Link to={"/register"}> Cadastre-se!</Link>
+                    </span>
+                </Forms>
+            </FormArea>
+            <ToastContainer />
+        </>
+    );
 };
 
 export default Login;

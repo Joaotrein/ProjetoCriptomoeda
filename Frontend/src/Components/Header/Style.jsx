@@ -16,6 +16,7 @@ export const Cabecalho = styled.div`
 }
 
 h1{
+    font-size: 50px;
     padding: 0; 
 }
 
@@ -25,7 +26,7 @@ span{
     justify-content: center;
     color: var(--fundo-palavras-destaque);
     font-weight: 900;
-    font-size: 40px;
+    font-size: 50px;
     text-transform: uppercase;
    
 }

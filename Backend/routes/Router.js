@@ -8,7 +8,7 @@ const userRouter = require("./UserRoutes")
 router.use("/api/users", userRouter);
 
 // Rota de teste, que envia uma mensagem de "A API está funcionando!" quando a raiz ("/") é acessada
-router.get("/", (req, res) => {
+router.get("/teste", (req, res) => {
     res.send("A API está funcionando!");
 });
 

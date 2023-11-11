@@ -1,14 +1,12 @@
-import './Global.css'
-import RouterPage from './Routes';
-
-
+import "./Global.css";
+import RouterPage from "./Routes/Routes";
 
 function App() {
-  return (
-    <>
-      <RouterPage />
-    </>
-  );
+    return (
+        <>
+            <RouterPage />
+        </>
+    );
 }
 
 export default App;
