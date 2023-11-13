@@ -22,10 +22,13 @@ export const Forms = styled.form`
     }
 
     h2 {
-        font-size: 2.5vw;
+        font-size: 30px;
+        text-align: center;
         color: var(--branco);
+        margin-bottom: 30px;
+        text-transform: uppercase;
     }
-
+    
     label {
         font-size: 16px;
         color: #fff;
@@ -64,6 +67,12 @@ export const Forms = styled.form`
 
     a:hover {
         text-decoration: underline;
+    }
+
+    @media(max-width: 768px){
+        width: 60%;
+
+        
     }
 `;
 

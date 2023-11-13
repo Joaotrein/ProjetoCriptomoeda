@@ -16,6 +16,12 @@ export const ContainerConteudo = styled.div`
     text-align: justify;
     margin-bottom: 1rem;
   }
+
+  @media(max-width: 425px){
+    p{
+      text-align: left;
+      font-size: 20px;
+    }
+  }
 `;
 
-export default ContainerConteudo;

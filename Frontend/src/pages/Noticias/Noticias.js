@@ -1,17 +1,20 @@
-import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
-import NewsApi from "../../CriptoNewsApi/ApiNews"
+import SidebarHeader from "../../Components/SidebarHeader/SidebarHeader";
+import { Title } from "../../Components/TitleStyle/Style";
+import NewsApi from "../../CriptoNewsApi/ApiNews";
 
 function Noticia() {
     return (
         <>
             <SidebarHeader />
 
-            <h1 className='home-title'>
-                <span>Notícias sobre Criptomoedas</span>
-            </h1>
+            <Title>
+                <h1>
+                    <span>Notícias sobre criptomoedas</span>
+                </h1>
+            </Title>
             <NewsApi />
         </>
-    )
+    );
 }
 
-export default Noticia
+export default Noticia;

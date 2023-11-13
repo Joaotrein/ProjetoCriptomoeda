@@ -56,7 +56,7 @@ const Login = () => {
             if (response.status === 200) {
                 const token = response.data.token;
                 localStorage.setItem("token", token);
-                notify()
+                notify();
                 setTimeout(() => {
                     navigate("/oquesao");
                 }, 3550);
@@ -103,10 +103,17 @@ const Login = () => {
 
                     {errors && (
                         <ErrorMessage>
-                            <p>{errors}</p>
+                            <li>{errors}</li>
                         </ErrorMessage>
                     )}
 
+                    <span>
+                        Esqueceu a senha?
+                        <Link to={"/ForgotPassword"}>
+                            {" "}
+                            Lembrar minha senha!
+                        </Link>
+                    </span>
                     <span>
                         Não tem conta?
                         <Link to={"/register"}> Cadastre-se!</Link>

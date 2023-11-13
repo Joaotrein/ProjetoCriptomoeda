@@ -30,7 +30,7 @@ export function NewsApi() {
                         <h1>{article.title}</h1>
                         <p>{article.description}</p>
                         <p>{article.content}</p>
-                        <button onClick={() => redirectToURL(article.url)}>Clique aqui para continuar lendo!</button>
+                        <button onClick={() => redirectToURL(article.url)}>Clique para continuar lendo</button>
                     </Cardnoticia>
                 ))}
             </CardContainer>

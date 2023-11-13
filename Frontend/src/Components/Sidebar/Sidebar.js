@@ -1,6 +1,8 @@
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container, Content } from "./Style.jsx";
+import { FaTimes } from "react-icons/fa";
+import SidebarItem from "../SidebarItem/SidebarItem";
 import { TbCoinBitcoin } from "react-icons/tb";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import {
@@ -11,74 +13,50 @@ import {
     BsRobot,
 } from "react-icons/bs";
 import { TbCoins } from "react-icons/tb";
-import { MdBalance } from "react-icons/md";
+import { MdBalance, MdOutlineAccountCircle } from "react-icons/md";
 import { RxExit } from "react-icons/rx";
-import { FaTimes } from "react-icons/fa";
-
-import SidebarItem from "../SidebarItem/SidebarItem";
 
 const Sidebar = ({ active }) => {
     const closeSidebar = () => {
         active(false);
     };
 
+    const navigate = useNavigate();
+
     const logout = () => {
         localStorage.removeItem("token");
-        Navigate("/");
+        navigate("/");
     };
+
+    const sidebarItems = [
+        { Icon: TbCoinBitcoin, Text: "O que são criptomoedas?", Path: "../oquesao"},
+        { Icon: AiOutlineQuestionCircle, Text: "Para que elas servem?", Path: "../funcaomoeda"},
+        { Icon: BsWallet2, Text: "Como posso obtê-las?", Path: "../obter" },
+        { Icon: BsShieldLock, Text: "Elas são seguras?", Path: "../seguras" },
+        { Icon: TbCoins, Text: "Quantas existem", Path: "../existem" },
+        { Icon: MdBalance,Text: "Quais direitos eu possuo?", Path: "../direitos"},
+        { Icon: BsGraphUpArrow, Text: "Como investir?", Path: "../investir" },
+        { Icon: BsNewspaper, Text: "Notícias", Path: "../noticias" },
+        { Icon: BsRobot, Text: "Chatbot", Path: "../chatbot" },
+        { Icon: MdOutlineAccountCircle, Text: "Informações da conta", Path: "../updateInformations" },
+        { Icon: RxExit, Text: "Sair", Path: "../", Action: logout },
+    ];
 
     return (
         <Container sidebar={active}>
             <FaTimes onClick={closeSidebar} />
             <Content>
-                <SidebarItem
-                    Icon={TbCoinBitcoin}
-                    Text={<Link to="../oquesao">O que são criptomoedas?</Link>}
-                />
-                <SidebarItem
-                    Icon={AiOutlineQuestionCircle}
-                    Text={
-                        <Link to="../funcaomoeda">Para que elas servem?</Link>
-                    }
-                />
-                <SidebarItem
-                    Icon={BsWallet2}
-                    Text={<Link to="../obter">Como posso obte-lás?</Link>}
-                />
-                <SidebarItem
-                    Icon={BsShieldLock}
-                    Text={<Link to="../seguras">Elas são seguras?</Link>}
-                />
-                <SidebarItem
-                    Icon={TbCoins}
-                    Text={<Link to="../existem">Quantas existem</Link>}
-                />
-                <SidebarItem
-                    Icon={MdBalance}
-                    Text={
-                        <Link to="../direitos">Quais direitos eu possuo?</Link>
-                    }
-                />
-                <SidebarItem
-                    Icon={BsGraphUpArrow}
-                    Text={<Link to="../investir">Como investir?</Link>}
-                />
-                <SidebarItem
-                    Icon={BsNewspaper}
-                    Text={<Link to="../noticias">Notícias</Link>}
-                />
-                <SidebarItem
-                    Icon={BsRobot}
-                    Text={<Link to="../chatbot">Chatbot</Link>}
-                />
-                <SidebarItem
-                    Icon={RxExit}
-                    Text={
-                        <Link to="../" onClick={logout}>
-                            Sair
-                        </Link>
-                    }
-                />
+                {sidebarItems.map((item, index) => (
+                    <SidebarItem
+                        key={index}
+                        Icon={item.Icon}
+                        Text={
+                            <Link to={item.Path} onClick={item.Action}>
+                                {item.Text}
+                            </Link>
+                        }
+                    />
+                ))}
             </Content>
         </Container>
     );

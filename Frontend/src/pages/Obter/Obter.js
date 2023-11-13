@@ -1,7 +1,8 @@
-import SidebarHeader from '../../Components/SidebarHeader/SidebarHeader'
-import { ContainerConteudo } from '../../Components/Conteudo/Style.jsx';
-import conteudoData from '../../ConteudoJson/Conteudo.json';
+import SidebarHeader from "../../Components/SidebarHeader/SidebarHeader";
+import { ContainerConteudo } from "../../Components/Conteudo/Style.jsx";
+import conteudoData from "../../ConteudoJson/Conteudo.json";
 import Footer from "../../Components/Footer/Footer";
+import { Title } from "../../Components/TitleStyle/Style.jsx";
 
 const EstiloJson = ({ paragraphs }) => {
     const EstiloPalavras = (text) => {
@@ -18,7 +19,9 @@ const EstiloJson = ({ paragraphs }) => {
             {paragraphs.map((paragraph, index) => (
                 <p
                     key={index}
-                    dangerouslySetInnerHTML={{ __html: EstiloPalavras(paragraph) }}
+                    dangerouslySetInnerHTML={{
+                        __html: EstiloPalavras(paragraph),
+                    }}
                 />
             ))}
         </ContainerConteudo>
@@ -32,13 +35,15 @@ function obter() {
         <>
             <SidebarHeader />
 
-            <h1 className='home-title'>
-                <span>Como obter Criptomoedas?</span>
-            </h1>
+            <Title>
+                <h1>
+                    <span>Como posso obter criptomeodas?</span>
+                </h1>
+            </Title>
             <EstiloJson paragraphs={paragraphs} />
             <Footer />
         </>
-    )
+    );
 }
 
 export default obter;

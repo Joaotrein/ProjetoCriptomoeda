@@ -53,8 +53,17 @@ const userUpdateValidation = () => {
   ];
 };
 
+const userForgotPassword = () => {
+  return [
+    body("email")
+      .isEmail()
+      .withMessage("Insira um email válido!"),
+  ];
+};
+
 module.exports = {
   userCreateValidation,
   loginValidation,
   userUpdateValidation,
+  userForgotPassword,
 };
