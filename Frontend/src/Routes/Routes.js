@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PrivateRoute } from "./PrivateRoute";
-import AccountPage from "../pages/Account/MyAccount";
 import Oquesao from "../pages/oquesao/oquesao";
 import Funcaomoeda from "../pages/paraqueservem/funcaomoeda";
 import Obter from "../pages/Obter/Obter";
@@ -14,6 +13,7 @@ import Chatbot from "../pages/Chatbot/Chatbot";
 import Register from "../pages/Auth/Register";
 import Login from "../pages/Auth/Login";
 import Reset from "../pages/Auth/Reset";
+import ForgotPassword from "../pages/Auth/ForgotPassword";
 
 function RouterPage() {
     return (
@@ -22,7 +22,8 @@ function RouterPage() {
                 <Routes>
                     <Route path="/register" element={<Register />} />
                     <Route path="/" element={<Login />} />
-                    <Route path="/ForgotPassword" element={<Reset />} />
+                    <Route path="/forgotPassword" element={<Reset />} />
+                    <Route path="/forgotpassword/:id/:token" element={<ForgotPassword />} />
                     <Route
                         path="/oquesao"
                         element={
@@ -92,14 +93,6 @@ function RouterPage() {
                         element={
                             <PrivateRoute>
                                 <Chatbot />
-                            </PrivateRoute>
-                        }
-                    />
-                    <Route
-                        path="/updateInformations"
-                        element={
-                            <PrivateRoute>
-                                <AccountPage />
                             </PrivateRoute>
                         }
                     />

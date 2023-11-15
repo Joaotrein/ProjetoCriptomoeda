@@ -13,7 +13,7 @@ import {
     BsRobot,
 } from "react-icons/bs";
 import { TbCoins } from "react-icons/tb";
-import { MdBalance, MdOutlineAccountCircle } from "react-icons/md";
+import { MdBalance } from "react-icons/md";
 import { RxExit } from "react-icons/rx";
 
 const Sidebar = ({ active }) => {
@@ -38,7 +38,6 @@ const Sidebar = ({ active }) => {
         { Icon: BsGraphUpArrow, Text: "Como investir?", Path: "../investir" },
         { Icon: BsNewspaper, Text: "Notícias", Path: "../noticias" },
         { Icon: BsRobot, Text: "Chatbot", Path: "../chatbot" },
-        { Icon: MdOutlineAccountCircle, Text: "Informações da conta", Path: "../updateInformations" },
         { Icon: RxExit, Text: "Sair", Path: "../", Action: logout },
     ];
 

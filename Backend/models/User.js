@@ -4,12 +4,13 @@ const { Schema } = mogoose;
 // Definindo o schema do usuário
 const userSchema = new Schema(
     {
-        name: String, 
-        email: String, 
-        password: String, 
+        name: String,
+        email: String,
+        password: String,
+        verifytoken: String, // Adiciona o campo para armazenar o token
     },
     {
-        timestamps: true, // Habilita o registro automático de data e hora de criação e atualização de documentos
+        timestamps: true,
     }
 );
 

@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-
-// Importando o roteador de usuários definido em "UserRoutes.js"
 const userRouter = require("./UserRoutes")
 
 // Usando o roteador de usuários para a rota "/api/users"
@@ -12,5 +10,4 @@ router.get("/teste", (req, res) => {
     res.send("A API está funcionando!");
 });
 
-// Exportando o roteador para ser utilizado na sua aplicação principal
 module.exports = router;

@@ -111,7 +111,7 @@ const Login = () => {
                         Esqueceu a senha?
                         <Link to={"/ForgotPassword"}>
                             {" "}
-                            Lembrar minha senha!
+                            Criar nova senha!
                         </Link>
                     </span>
                     <span>

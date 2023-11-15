@@ -1,11 +1,7 @@
-// Carrega as variáveis de ambiente definidas no arquivo .env
 require("dotenv").config();
-
-// Importa as bibliotecas necessárias
 const express = require("express");
 const cors = require("cors");
 const app = express();
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -18,6 +14,7 @@ app.use(
         credentials: true,
     })
 );
+
 
 require("./config/db.js");
 
