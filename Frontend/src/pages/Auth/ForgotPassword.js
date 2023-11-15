@@ -1,4 +1,3 @@
-// Importações
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -9,11 +8,12 @@ import Header from "../../Components/Header/Header";
 import { Button, FormArea, Forms, ErrorMessage } from "./Style";
 
 const ForgotPassword = () => {
-    const { id, token } = useParams();
+    const { id, token } = useParams(); // Obtém parâmetros da URL usando o hook useParams do React Router
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
     const [tokenValid, setTokenValid] = useState(true);
 
+    // Função para exibir notificações usando react-toastify
     const notify = (message, type = "success") => {
         toast[type](message, {
             position: "top-left",
@@ -27,25 +27,29 @@ const ForgotPassword = () => {
         });
     };
 
+    // Função para verificar se o usuário e token são válidos
     const userValid = async () => {
         try {
             const res = await axios.get(`/forgotpassword/${id}/${token}`);
-            const data = res.data; // Assuming that the response contains a JSON object
+            const data = res.data; // Supondo que a resposta contenha um objeto JSON
 
+            // Verifica o status da resposta e atualiza o estado de acordo
             if (data.status === 201) {
-                console.log("user valid");
+                console.log("usuário válido");
             } else {
                 setTokenValid(false);
             }
         } catch (error) {
-            console.error("Error checking user validity", error);
+            console.error("Erro ao verificar a validade do usuário", error);
         }
     };
 
+    // Efeito useEffect para chamar a função userValid() assim que o componente for montado
     useEffect(() => {
         userValid();
-    }, []); // Run once on component mount
+    }, []);
 
+    // Função para lidar com o envio do formulário de redefinição de senha
     const handleSubmit = async (e) => {
         e.preventDefault();
         setErrors([]);
@@ -55,17 +59,21 @@ const ForgotPassword = () => {
         };
 
         try {
-            const res = await axios.post(`http://localhost:8000/api/users/${id}/${token}`, userData);
-            const data = res.data; // Corrected: use res.data instead of res.data
+            const res = await axios.post(
+                `http://localhost:8000/api/users/${id}/${token}`,
+                userData
+            );
+            const data = res.data;
 
+            // Verifica o status da resposta e atualiza o estado de acordo
             if (data.status === 201) {
                 setPassword("");
-                notify("Password updated successfully");
+                notify("Senha atualizada com sucesso");
             } else {
-                setErrors(["Token Expired. Generate a new link."]);
+                setErrors(["Token expirado. Gere um novo link."]);
             }
         } catch (error) {
-            console.error("Error updating password", error);
+            console.error("Erro ao atualizar a senha", error);
         }
     };
 
@@ -86,14 +94,11 @@ const ForgotPassword = () => {
 
                     <Button type="submit">Enviar nova senha</Button>
 
-                    {errors.length > 0 && (
-                        <ErrorMessage>
-                            {errors.map((error, index) => (
-                                <li key={index}>{error}</li>
-                            ))}
-                        </ErrorMessage>
-                    )}
-
+                    <ErrorMessage>
+                        {errors.map((error, index) => (
+                            <li key={index}>{error}</li>
+                        ))}
+                    </ErrorMessage>
                     {!tokenValid && (
                         <ErrorMessage>
                             <li>Token expirado. Gere um novo link.</li>

@@ -7,9 +7,9 @@ import { Title } from "../../Components/TitleStyle/Style.jsx";
 const EstiloJson = ({ paragraphs }) => {
     const EstiloPalavras = (text) => {
         return text.replace(
-            /diferentes tipos de criptomoedas|Compra em Exchanges|Mineração:|problemas matemáticos complexos|novas unidades da criptomoeda|Por Troca|peer-to-peer|particularidades e riscos associados|ICOs e IEOs.|tendências e regulamentações/gi,
+            /bolsas de criptomoedas|mineração|recompensas e faucets|investimento direto em criptomoedas|finanças descentralizadas (DeFi)|plataformas P2P (peer-to-peer)|cartões de débito cripto|mercado de criptomoedas|segurança|carteiras cripto|autenticação de dois fatores|DeFi/gi,
             (conexao) => `
-        <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
+      <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
       `
         );
     };

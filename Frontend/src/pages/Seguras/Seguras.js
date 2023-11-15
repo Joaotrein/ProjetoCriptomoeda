@@ -8,7 +8,7 @@ import { Title } from "../../Components/TitleStyle/Style.jsx";
 const EstiloJson = ({ paragraphs }) => {
     const EstiloPalavras = (text) => {
         return text.replace(
-            /Blockchain e Descentralização:|ataques cibernéticos.|Controle de Chaves Privadas:|uma pública e outra privada|Vulnerabilidades e Hacks:|Responsabilidade Individual:|alto nível de segurança|Criptografia:|criptografia avançados|moeda digital|as criptomoedas são notavelmente seguras/gi,
+            /Ao ingressar|questão da segurança|atentos às últimas tendências e desenvolvimentos em segurança cibernética|sistema financeiro tradicional|Criado por Satoshi Nakamoto|histórico de transações|criptomoedas representam uma oportunidade|risco de fraudes|necessidade de intermediários|resistente a ataques maliciosos|algoritmos criptográficos|cadeia imutável|escalabilidade e interoperabilidade|segurança e eficiência|tecnologia inovadora/gi,
             (conexao) => `
         <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
       `

@@ -8,10 +8,10 @@ import { Title } from "../../Components/TitleStyle/Style.jsx";
 const EstiloJson = ({ paragraphs }) => {
     const EstiloPalavras = (text) => {
         return text.replace(
-            /Satoshi Nakamoto|instituições financeiras|blockchain|investimentos em criptomoedas têm riscos/gi,
+            /criação das criptomoedas|Satoshi Nakamoto|revolução financeira|blockchain|Bitcoin|Ethereum|Ripple|Litecoin|processo de mineração|diversidade no universo|educação em criptomoedas|revolução digital do dinheiro|oportunidades em criptomoedas|desafios no Brasil|falta de informações|educação financeira|segurança digital|risco em investimentos/gi,
             (conexao) => `
-      <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
-    `
+        <b style="color: #dea20a; ">${conexao}</b>
+      `
         );
     };
 

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const slideIn = keyframes`
   from {
@@ -19,26 +19,26 @@ const slideOut = keyframes`
 `;
 
 export const Container = styled.div`
-  background-color: var(--fundo-divisoes);
-  position: fixed;
-  height: 100%;
-  top: 0;
-  left: ${props => (props.sidebar ? '0' : '-100%')};
-  width: 300px;
-  animation: ${props => (props.sidebar ? slideIn : slideOut)} 0.4s;
-  z-index: 1;
+    background-color: var(--fundo-divisoes);
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: ${(props) => (props.sidebar ? "0" : "-100%")};
+    width: 300px;
+    animation: ${(props) => (props.sidebar ? slideIn : slideOut)} 0.4s;
+    z-index: 1;
 
-  > svg {
-    position: absolute;
-    color: white;
-    width: 30px;
-    height: 30px;
-    margin-top: 32px;
-    margin-left: 32px;
-    cursor: pointer;
-  }
+    > svg {
+        position: absolute;
+        color: white;
+        width: 30px;
+        height: 30px;
+        margin-top: 32px;
+        margin-left: 32px;
+        cursor: pointer;
+    }
 `;
 
 export const Content = styled.div`
-  margin-top: 100px;
+    margin-top: 100px;
 `;

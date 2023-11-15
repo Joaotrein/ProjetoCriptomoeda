@@ -28,7 +28,7 @@ export const Forms = styled.form`
         margin-bottom: 30px;
         text-transform: uppercase;
     }
-    
+
     label {
         font-size: 16px;
         color: #fff;
@@ -69,10 +69,8 @@ export const Forms = styled.form`
         text-decoration: underline;
     }
 
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
         width: 60%;
-
-        
     }
 `;
 

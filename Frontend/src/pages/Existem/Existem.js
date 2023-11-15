@@ -1,6 +1,5 @@
 import React from "react";
 import SidebarHeader from "../../Components/SidebarHeader/SidebarHeader";
-// import BotoesContent from "../../Components/BotoesContent/BotoesContent";
 import { ContainerConteudo } from "../../Components/Conteudo/Style.jsx";
 import conteudoData from "../../ConteudoJson/Conteudo.json";
 import Footer from "../../Components/Footer/Footer";
@@ -10,9 +9,9 @@ import { Title } from "../../Components/TitleStyle/Style.jsx";
 const EstiloJson = ({ paragraphs }) => {
     const EstiloPalavras = (text) => {
         return text.replace(
-            /milhares de criptomoedas| 2009| |Bitcoin| |Ethereum|Ripple|Litecoin|Cardano|dinâmica e inovadora|estudar suas características|aplicativos descentralizados|mportante entender suas diferenças|preço atual|/gi,
+            /Bitcoin|Ethereum|Ripple|Litecoin|Cardano|Polkadot|Binance Coin|Chainlink|Stellar|Dogecoin|Uniswap|VeChain|Polygon|Tezos/gi,
             (conexao) => `
-        <b style="color: #dea20a; ">${conexao}</b>
+        <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
       `
         );
     };

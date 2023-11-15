@@ -74,8 +74,8 @@ export const Title = styled.h1`
         }
     }
 
-    @media(max-width: 375px){
-        h1{
+    @media (max-width: 375px) {
+        h1 {
             font-size: 25px;
         }
     }

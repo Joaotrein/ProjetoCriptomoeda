@@ -8,7 +8,7 @@ import { Title } from "../../Components/TitleStyle/Style.jsx";
 const EstiloJson = ({ paragraphs }) => {
     const EstiloPalavras = (text) => {
         return text.replace(
-            /Meio de Pagamento:|Transferências Internacionais:|Investimento:|Proteção contra Inflação:|se informem adequadamente|Privacidade Financeira:|Inclusão Financeira:|Desenvolvimento Tecnológico:/gi,
+            /transações financeiras|contratos inteligentes|blockchain|inovação financeira|sistema financeiro tradicional|investir em criptomoedas|volatilidade|traders e investidores|propriedade intelectual|cadeias de suprimentos|inclusão financeira|resistência à censura|privacidade|transferências internacionais|ajuda humanitária|remessas|meio de troca|inovação financeira|cenário econômico global|mundo digital|potencialidades/gi,
             (conexao) => `
       <b style="color: #dea20a; font-weight: bold;">${conexao}</b>
       `

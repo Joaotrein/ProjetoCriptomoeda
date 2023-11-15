@@ -40,7 +40,7 @@ const Reset = () => {
                 "http://localhost:8000/api/users/sendpasswordlink",
                 userData
             );
-            
+
             console.log(response);
 
             if (response.status === 200) {

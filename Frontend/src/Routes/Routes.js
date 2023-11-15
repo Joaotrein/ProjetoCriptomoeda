@@ -14,6 +14,7 @@ import Register from "../pages/Auth/Register";
 import Login from "../pages/Auth/Login";
 import Reset from "../pages/Auth/Reset";
 import ForgotPassword from "../pages/Auth/ForgotPassword";
+import NotFound from "../pages/NotFound/NotFound";
 
 function RouterPage() {
     return (
@@ -94,6 +95,12 @@ function RouterPage() {
                             <PrivateRoute>
                                 <Chatbot />
                             </PrivateRoute>
+                        }
+                    />
+                     <Route
+                        path="*"
+                        element={
+                           <NotFound />
                         }
                     />
                 </Routes>

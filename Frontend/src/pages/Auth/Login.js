@@ -1,4 +1,3 @@
-// Importações
 import { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,7 +16,6 @@ import {
     ErrorMessage,
 } from "./Style";
 
-// Componente Login
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -109,10 +107,7 @@ const Login = () => {
 
                     <span>
                         Esqueceu a senha?
-                        <Link to={"/ForgotPassword"}>
-                            {" "}
-                            Criar nova senha!
-                        </Link>
+                        <Link to={"/ForgotPassword"}> Criar nova senha!</Link>
                     </span>
                     <span>
                         Não tem conta?

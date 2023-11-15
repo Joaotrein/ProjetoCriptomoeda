@@ -23,7 +23,6 @@ const connectToDatabase = async () => {
     }
 };
 
-// Invocando a função para conectar ao banco de dados
 connectToDatabase();
 
-module.exports = connectToDatabase; // Exporta a função de conexão com o banco de dados
+module.exports = connectToDatabase; 

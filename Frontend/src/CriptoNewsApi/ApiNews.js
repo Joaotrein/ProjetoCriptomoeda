@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Cardnoticia, CardContainer } from '../../src/CriptoNewsApi/Style.jsx';
+
+import React, { useState, useEffect } from "react";
+import { Cardnoticia, CardContainer } from "../../src/CriptoNewsApi/Style.jsx";
 
 export function NewsApi() {
     const [articles, setArticles] = useState([]);
-    const apikey = '00fdd8432c73e937542b5254153d8c2e';
-    const url = 'https://gnews.io/api/v4/search?q=bitcoin&lang=pt&country=br&max=20&apikey=' + apikey;
+    const apikey = "00fdd8432c73e937542b5254153d8c2e";
+    const url =
+        "https://gnews.io/api/v4/search?q=bitcoin&lang=pt&country=br&max=20&apikey=" +
+        apikey;
 
     const redirectToURL = (url) => {
-        window.open(url, '_blank');
+        window.open(url, "_blank");
     };
 
     useEffect(() => {
@@ -17,24 +20,26 @@ export function NewsApi() {
                 setArticles(data.articles);
             })
             .catch((error) => {
-                console.error('Error fetching data:', error);
+                console.error("Error fetching data:", error);
             });
     }, [url]);
 
     return (
         <>
             <CardContainer>
-                {articles && articles.map((article, index) => (
-                    <Cardnoticia key={index}>
-                        <img src={article.image} alt={article.title} />
-                        <h1>{article.title}</h1>
-                        <p>{article.description}</p>
-                        <p>{article.content}</p>
-                        <button onClick={() => redirectToURL(article.url)}>Clique para continuar lendo</button>
-                    </Cardnoticia>
-                ))}
+                {articles &&
+                    articles.map((article, index) => (
+                        <Cardnoticia key={index}>
+                            <img src={article.image} alt={article.title} />
+                            <h1>{article.title}</h1>
+                            <p>{article.description}</p>
+                            <p>{article.content}</p>
+                            <button onClick={() => redirectToURL(article.url)}>
+                                Clique para continuar lendo
+                            </button>
+                        </Cardnoticia>
+                    ))}
             </CardContainer>
-
         </>
     );
 }
