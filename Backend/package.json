@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install-deps": "cd frontend && npm install && cd ../backend && npm install",
-    "build": "npm run build --prefix frontend && npm run build --prefix backend",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon ./app.js"
   },
