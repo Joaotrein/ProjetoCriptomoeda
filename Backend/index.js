@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
     cors({
-        origin: "https://projetocriptomoeda.onrender.com",
+        origin: "https://projetocriptomoeda-front.onrender.com",
         methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
         credentials: true,
     })
