@@ -51,7 +51,7 @@ const Register = () => {
 
         try {
             const response = await axios.post(
-                "https://projetocriptomoeda.onrender.com/api/users/register",
+                "https://projetocriptomoeda-front.onrender.com/api/users/register",
                 userData
             );
 
