@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
     cors({
-        origin: ["*"],
+        origin: "*",
         methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
         allowedHeaders: 'Content-Type,Authorization',
     })
