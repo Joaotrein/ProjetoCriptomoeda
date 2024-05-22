@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -60,7 +60,7 @@ const ForgotPassword = () => {
 
         try {
             const res = await axios.post(
-                `http://localhost:8000/api/users/${id}/${token}`,
+                `https://projetocriptomoeda.onrender.com/api/users/${id}/${token}`,
                 userData
             );
             const data = res.data;

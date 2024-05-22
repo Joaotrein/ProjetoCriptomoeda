@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
     cors({
-        origin: "http://localhost:3000",
+        origin: "https://projetocriptomoeda.onrender.com",
         methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
         credentials: true,
     })

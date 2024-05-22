@@ -51,7 +51,7 @@ const Register = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/users/register",
+                "https://projetocriptomoeda.onrender.com/api/users/register",
                 userData
             );
 

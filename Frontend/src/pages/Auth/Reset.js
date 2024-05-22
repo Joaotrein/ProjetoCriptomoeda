@@ -37,7 +37,7 @@ const Reset = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/users/sendpasswordlink",
+                "https://projetocriptomoeda.onrender.com/api/users/sendpasswordlink",
                 userData
             );
 
