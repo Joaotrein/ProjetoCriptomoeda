@@ -7,7 +7,7 @@ const userSchema = new Schema(
         name: String,
         email: String,
         password: String,
-        verifytoken: String, // Adiciona o campo para armazenar o token
+        verifytoken: String,
     },
     {
         timestamps: true,
