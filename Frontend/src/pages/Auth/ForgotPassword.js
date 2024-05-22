@@ -60,7 +60,7 @@ const ForgotPassword = () => {
 
         try {
             const res = await axios.post(
-                `https://projetocriptomoeda.onrender.com/api/users/${id}/${token}`,
+                `https://projetocriptomoeda-front.onrender.com/api/users/${id}/${token}`,
                 userData
             );
             const data = res.data;
